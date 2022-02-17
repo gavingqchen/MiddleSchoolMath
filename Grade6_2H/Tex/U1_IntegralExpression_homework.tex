@@ -1,0 +1,103 @@
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
+
+\usepackage{multicol} % 分栏
+\pagestyle{fancy}
+\fancyfoot[C]{\kaishu \small 第 \thepage 页 共 \pageref{lastpage} 页}
+%\fancyhead[L]{\includegraphics[width=2cm]{qrcode.png}}
+\title{整式的恒等变换1-作业}
+%\subtitle{数学文科试卷}
+%\notice{满分150分, 120分钟完成, \\	允许使用计算器，答案一律写在答题纸上.}
+%\author{Gavin Chen}
+%\date{\today}
+\usepackage{enumerate} % 编号
+
+\begin{document}
+\maketitle
+
+
+\begin{groups}
+
+    \group{整式的恒等变换1-作业}{}
+    \begin{questions}[]
+        \question[5] 判断下列等式是否成立，如果不成立，请指出其中的错误。
+        \fourchoices
+        {$a^r\cdot a^s=a^{rs}$}
+        {$(a^r)^s=a^{r+s}$}
+        {$\left(\frac{a}{b}\right)^r=a^r\cdot b^{-r}$}
+        {$a^r b^s=\left(ab\right)^{r+s}$ }
+        \begin{solution}{0.5cm}
+            \methodonly 略
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 已知$y=ax^5+bx^3+cx+d$，当$x=0$时$y=-3$；当$x=-5$时$y=9$，求当$x=5$时$y$的值。
+        \begin{solution}{0.5cm}
+            \methodonly 思路: 本题无法直接带去求解方程，但可以从奇偶性入手.
+            当$x=0$时$y=-3$,带入即得$d=-3$. \\
+            当$x=-5$时$y=9$带入得$9=a(x)^5+b(x)^3+c(x)-3$，\\
+            故而$x=-5$时$a\cdot x^5+ b\cdot x^3 + c\cdot 5 = 12$， 所以$x=5$时$y=-12-3=-15$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 解方程$3x^2-12x^2y+12x^2y^2+y^2-4y+4=0$
+        \begin{solution}{0.5cm}
+            \methodonly 原方程可化为$3x^2(2y-1)^2+(y-2)^2=0$ \\
+                $\left\{ 
+                \begin{aligned}
+                    x&=0,\\
+                    y&=2.
+                \end{aligned}
+                \right. $
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 已知$2^x+2^{-x}=a$，其中$a$为常数，求$4^x+4^{-x}$的结果，用$a$的表达式表示。
+        \begin{solution}{0.5cm}
+            \methodonly $(2^x+2^{-x})^2=a^2$
+            \\$4^x+4^{-x}=a^2-2$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 已知$a+b+c=0,a^2+b^2+c^2=1$， 求
+        \begin{subquestions}
+            \subquestion $bc+ac+ab$
+            \subquestion $a^4+b^4+c^4$
+        \end{subquestions}
+        \begin{solution}{0.5cm}
+            \methodonly $(a+b+c)^2=a^2+b^2+c^2+2(ab+bc+ac)$ 所以$ab+bc+ac=-\frac{1}{2}$\\
+            $(bc+ac+ab)^2=b^2c^2+a^2b^2+a^2c^2+2abc(a+b+c)=\frac{1}{4}$ \\
+            而$a^4+b^4+c^4=(a^2+b^2+c^2)^2-2(b^2c^2+a^2b^2+a^2c^2)=\frac{1}{2}$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 已知$3x^2-x=1$，求$6x^3+7x^2-5x+2022$
+        \begin{solution}{0.5cm}
+            \methodonly 原式$=2x(3x^2-x)+3(3x^2-x)-2x+2022=2x+3-2x+2022=2025$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 求$2x^2-4xy+5y^2-12y+13$最小值。
+        \begin{solution}{0.5cm}
+            \methodonly 原式$=2(x-y)^2+3(y-2)^2+1$，故最小是为$1$。
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 求$(2+1)(2^2+1)(2^4+1)\cdots(2^{2^n}+1)$的值。
+        \begin{solution}{0.5cm}
+            \methodonly $4^{2^n}-1=2^{2^{n+1}}-1$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 求方程$(x^2+3x-4)^2+(2x^2-7x+6)^2=(3x^2-4x+2)^2$的解。
+        \begin{solution}{0.5cm}
+            \methodonly 令$u=x^2+3x-4, v=2x^2-7x+6$，原方程可化为\\
+            $u^2+v^2=(u+v)^2$，所以$uv=0$，即$u=0$或$v=0$
+            所以原方程的解为 $$ x=1,-4,2,\frac{3}{2}$$
+            
+        \end{solution}
+    \end{questions}
+
+\end{groups}
+\label{lastpage}
+\end{document}
