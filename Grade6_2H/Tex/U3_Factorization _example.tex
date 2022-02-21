@@ -1,0 +1,128 @@
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
+
+\usepackage{multicol} % 分栏
+\pagestyle{fancy}
+\fancyfoot[C]{\kaishu \small 第 \thepage 页 共 \pageref{lastpage} 页}
+%\fancyhead[L]{\includegraphics[width=2cm]{qrcode.png}}
+\title{因式分解 - 换元法}
+%\subtitle{数学文科试卷}
+%\notice{满分150分, 120分钟完成, \\	允许使用计算器，答案一律写在答题纸上.}
+%\author{Gavin Chen}
+%\date{\today}
+\usepackage{enumerate} % 编号
+
+
+\begin{document}
+
+\maketitle
+
+\begin{groups}
+    \group{换元法概念}{}
+    “换元”就是“字母替代式”，即用新的“元”代替原来式中的式，使得原式编程含有新“元”
+    的式子，然后对含有新元的式子按照要求求出结果，在将其代替的式子代回来，求出原式结果。
+    \group{换元的作用}{}
+    \begin{itemize}
+        \item 为什么换元：化繁为简，比如高次化为低次，分式化成整式，等等。
+        \item 什么时候换元：相同或者相似形式的代数式反复出现的时候。
+        \item 最重要的，记得还原回来。
+    \end{itemize}
+
+    \group{常用换元方法}{}
+    \begin{itemize}
+        \item 局部换元
+        \item 均值换元
+        \item 和积换元
+    \end{itemize}
+
+
+\end{groups}
+
+\begin{groups}
+    \group{换元法例题}{}
+
+    \begin{questions}[]
+        \question[5]因式分解$(x^2+x-1)^2+(x^2+x-1)-2$
+        \begin{solution}{0.5cm}
+            \methodonly 设$x^2+x-1=u$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}u^2+u-2   \\
+                     & =(u-1)(u+2)          \\
+                     & =(x^2+x-2)(x^2+x+1)  \\
+                     & =(x-1)(x+2)(x^2+x+1)
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5]因式分解$(x^2+4x+8)^2+3x(x^2+4x+8)+2x^2$ (局部换元)
+        \begin{solution}{0.5cm}
+            \methodonly 设$x^2+4x+8=u$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}u^2+3xu+2x^2    \\
+                     & =(u+x)(u+2x)               \\
+                     & =(x^2+4x+8+x)(x^2+4x+8+2x) \\
+                     & =(x^2+5x+8)(x^2+6x+8)      \\
+                     & = (x+2)(x+4)(x^2+5x+8)
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5]因式分解$x^4+(2y+4)x^2+y^2+4y+4$ (局部换元)
+        \begin{solution}{0.5cm}
+            \methodonly 解法一：设$y+2=u$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}x^4+2ux^2+u^2 \\
+                     & =(x^2+u)^2               \\
+                     & =(x^2+y+2)^2             \\
+                \end{aligned}
+            \]
+            解法二：此题也可以设$x^2+y=m$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}x^4+2x^2 y+y^2+4x^2+4y+4 \\
+                     & =(x^2+y)^2 + 4(x^2+y) +4            \\
+                     & =m^2+4m+4                           \\
+                     & =(x^2+y+2)^2
+                \end{aligned}
+            \]
+            解法三：此题也可以设$x^2+2=n$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}x^4+4x^2+4+2x^2 y+4y+y^2 \\
+                     & =(x^2+2)^2+2y(x^2+2)+y^2            \\
+                     & =n^2+2yn+y^2                        \\
+                     & =(x^2+y+2)^2
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 因式分解$(2a^2+2a+1)b+a(a+1)(b^2+1)$
+        \begin{solution}{0.5cm}
+            \methodonly 此题展开后合并不容易，可以将$a+1$看成整体。设$a+1=u$
+            那么$(a^2+2a+1)=u^2$，所以原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}(u^2+a^2)b+ay(b^2+1) \\
+                     & =u^2b+a^2b+aub^2+au             \\
+                     & =(u^2b+au)+(a^2+aub^2)          \\
+                     & =(ub+a)(u+ab)                   \\
+                     & =(a+b+ab)(a+1+ab)
+                \end{aligned}
+            \]
+        \end{solution}
+
+
+
+    \end{questions}
+\end{groups}
+
+
+
+\label{lastpage}
+\end{document}
