@@ -42,7 +42,7 @@
     \group{换元法例题}{}
 
     \begin{questions}[]
-        \question[5]因式分解$(x^2+x-1)^2+(x^2+x-1)-2$
+        \question[5]因式分解：$(x^2+x-1)^2+(x^2+x-1)-2$
         \begin{solution}{0.5cm}
             \methodonly 设$x^2+x-1=u$，原式可化为
             \[
@@ -56,7 +56,7 @@
         \end{solution}
         \vspace{3.5cm}
 
-        \question[5]因式分解$(x^2+4x+8)^2+3x(x^2+4x+8)+2x^2$ (局部换元)
+        \question[5]因式分解：$(x^2+4x+8)^2+3x(x^2+4x+8)+2x^2$ (局部换元)
         \begin{solution}{0.5cm}
             \methodonly 设$x^2+4x+8=u$，原式可化为
             \[
@@ -71,7 +71,7 @@
         \end{solution}
         \vspace{3.5cm}
 
-        \question[5]因式分解$x^4+(2y+4)x^2+y^2+4y+4$ (局部换元)
+        \question[5]因式分解：$x^4+(2y+4)x^2+y^2+4y+4$ (局部换元)
         \begin{solution}{0.5cm}
             \methodonly 解法一：设$y+2=u$，原式可化为
             \[
@@ -102,7 +102,7 @@
         \end{solution}
         \vspace{3.5cm}
 
-        \question[5] 因式分解$(2a^2+2a+1)b+a(a+1)(b^2+1)$
+        \question[5] 因式分解：$(2a^2+2a+1)b+a(a+1)(b^2+1)$
         \begin{solution}{0.5cm}
             \methodonly 此题展开后合并不容易，可以将$a+1$看成整体。设$a+1=u$
             那么$(a^2+2a+1)=u^2$，所以原式可化为
@@ -117,12 +117,126 @@
             \]
         \end{solution}
 
+        \question[5] 因式分解：$(x+1)^4+(x+3)^4-272$ (均值换元)
+        \begin{solution}{0.5cm}
+            \methodonly 选取括号内的均值为元，设$x+2=u$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}(u-1)^4+(u+1)^4-272        \\
+                     & = [(u^2+1)-2u]^2 + [(u^2+1)+2u]^2-272 \\
+                     & = 2(u^4+6u^2+1)-272                   \\
+                     & = 2(u^4+6u^2-135)                     \\
+                     & = 2(u^2-9)(u^2+15)                    \\
+                     & = 2(u+3)(u-3)(u^2+15)                 \\
+                     & = 2(x-1)(x+5)(x^2+4x+19)
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 因式分解：$(x+1)(x+3)(x+5)(x+7)+15$
+        \begin{solution}{0.5cm}
+            \methodonly 一般会凑成$ax^2+bx+m$形式然后对常数取平均换元，注意这不是绝对的。取其他值(比如较小值)还原一样可行。
+            \[
+                \begin{aligned}
+                     & \phantom{=}[(x+1)(x+7)][(x+3)(x+5)]+15 \\
+                     & = (x^2+8x+7)(x^2+8x+15) +15
+                \end{aligned}
+            \]
+            设$x^2+8x+11=u$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}(u-4)(u+4)+15 \\
+                     & =  u^2-16+15             \\
+                     & = (u+1)(u-1)             \\
+                     & = (x^2+8x+12)(x^2+8x+10) \\
+                     & = (x+2)(x+6)(x^2+8x+10)
+                \end{aligned}
+            \]
+            解二：若设$x^2+8x+7=v$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}v(v+8)+15     \\
+                     & =  v^2+8v+15             \\
+                     & = (v+3)(v+5)             \\
+                     & = (x^2+8x+12)(x^2+8x+10) \\
+                     & = (x+2)(x+6)(x^2+8x+10)
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 证明：四个连续整数的乘积加$1$是整数的平方。
+        \begin{solution}{0.5cm}
+            \methodonly 设四个整数分别为$x+1,x+2,x+3,x+4$ 那么
+            \[
+                \begin{aligned}
+                     & \phantom{=}(x+1)(x+2)(x+3)(x+4)+1 \\
+                     & = [(x+1)(x+4)][(x+2)(x+3)]+1      \\
+                     & = (x^2+5x+4)(x^2+5x+6) +1
+                \end{aligned}
+            \]
+            设$x^2+5x+4=t$ 上式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}t(t+2)+1 \\
+                     & = (t+1)^2           \\
+                     & = (x^2+5x+5)^2
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 因式分解：$(x^2+3x+3)(x^2+7x+3)+3x^2$ (局部换元)
+        \begin{solution}{0.5cm}
+            \methodonly 设$x^2+3x+3=t$ 原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}t(t+4x)+3x^2 \\
+                     & = t^2+4xt+3x^2 \\ 
+                     & = (t+x)(t+3x)
+                     & = (x^2+4x+3)(x^2+6x+3) \\ 
+                     & = (x+1)(x+3)(x^2+6x+3)
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 因式分解：$(x^2-x-2)(x^2+9x-2)+9x^2$ (局部换元)
+        \begin{solution}{0.5cm}
+            \methodonly 设$x^2-x-2=t$ 原式可化为 （注也可设$x^2+4x-2=m$求解）
+            \[
+                \begin{aligned}
+                     & \phantom{=}t(t+10x)+9x^2 \\
+                     & = t^2+10xt+9x^2 \\ 
+                     & = (t+x)(t+9x) \\ 
+                     & = (x^2-2)(x^2+8x-2)
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 因式分解：$(x+y-2xy)(x+y-2)+(1-xy)^2$ (积和换元)
+        \begin{solution}{0.5cm}
+            \methodonly 设$x+y=m,xy=n$ 原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}(m-2n)(m-2)+(1-n)^2 \\
+                     & = m^2-2m-2mn+4n+n^2-2n+1 \\ 
+                     & = m^2-2mn+n^2-2m+2n+1 \\ %双十字
+                     & = (m-n-1)^2 \\ 
+                     & = (x+y-xy-1)^2 \\ 
+                     & = (1-y)^2(x-1)^2
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+
 
 
     \end{questions}
 \end{groups}
-
-
 
 \label{lastpage}
 \end{document}
