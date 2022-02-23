@@ -19,7 +19,7 @@
 
 \begin{groups}
     \group{换元法概念}{}
-    “换元”就是“字母替代式”，即用新的“元”代替原来式中的式，使得原式编程含有新“元”
+    “换元”就是“字母替代式”，即用新的“元”代替原来式中的式，使得原式变成含有新“元”
     的式子，然后对含有新元的式子按照要求求出结果，在将其代替的式子代回来，求出原式结果。
     \group{换元的作用}{}
     \begin{itemize}
@@ -32,7 +32,8 @@
     \begin{itemize}
         \item 局部换元
         \item 均值换元
-        \item 和积换元
+        \item 和积$x+y;xy$形式
+        \item $x+\frac{1}{x}$形式
     \end{itemize}
 
 
@@ -73,7 +74,7 @@
 
         \question[5]因式分解：$x^4+(2y+4)x^2+y^2+4y+4$ (局部换元)
         \begin{solution}{0.5cm}
-            \methodonly 解法一：设$y+2=u$，原式可化为
+            \method 设$y+2=u$，原式可化为
             \[
                 \begin{aligned}
                      & \phantom{=}x^4+2ux^2+u^2 \\
@@ -81,7 +82,7 @@
                      & =(x^2+y+2)^2             \\
                 \end{aligned}
             \]
-            解法二：此题也可以设$x^2+y=m$，原式可化为
+            \method 此题也可以设$x^2+y=m$，原式可化为
             \[
                 \begin{aligned}
                      & \phantom{=}x^4+2x^2 y+y^2+4x^2+4y+4 \\
@@ -90,7 +91,7 @@
                      & =(x^2+y+2)^2
                 \end{aligned}
             \]
-            解法三：此题也可以设$x^2+2=n$，原式可化为
+            \method 此题也可以设$x^2+2=n$，原式可化为
             \[
                 \begin{aligned}
                      & \phantom{=}x^4+4x^2+4+2x^2 y+4y+y^2 \\
@@ -136,7 +137,7 @@
 
         \question[5] 因式分解：$(x+1)(x+3)(x+5)(x+7)+15$
         \begin{solution}{0.5cm}
-            \methodonly 一般会凑成$ax^2+bx+m$形式然后对常数取平均换元，注意这不是绝对的。取其他值(比如较小值)还原一样可行。
+            \method 一般会凑成$ax^2+bx+m$形式然后对常数取平均换元，注意这不是绝对的。取其他值(比如较小值)还原一样可行。
             \[
                 \begin{aligned}
                      & \phantom{=}[(x+1)(x+7)][(x+3)(x+5)]+15 \\
@@ -153,7 +154,7 @@
                      & = (x+2)(x+6)(x^2+8x+10)
                 \end{aligned}
             \]
-            解二：若设$x^2+8x+7=v$，原式可化为
+            \method 设$x^2+8x+7=v$，原式可化为
             \[
                 \begin{aligned}
                      & \phantom{=}v(v+8)+15     \\
@@ -165,6 +166,29 @@
             \]
         \end{solution}
         \vspace{3.5cm}
+
+        \question[5] 因式分解：$(x^2+6x+8)(x^2+14x+48)+12$
+        \begin{solution}{0.5cm}
+            \methodonly 原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}(x+2)(x+4)(x+6)(x+8)+12 \\
+                     & = [(x+2)(x+8)][(x+4)(x+6)]+12      \\
+                     & = (x^2+10x+16)(x^2+10x+24) + 12    \\
+                \end{aligned}
+            \]
+            设$x^2+10x+20=m$，换元后可得
+            \[
+                \begin{aligned}
+                     & \phantom{=}(m-4)(m+4)+12   \\
+                     & = m^2-4                    \\
+                     & = (m+2)(m-2)               \\
+                     & = (x^2+10x+22)(x^2+10x+18)
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
 
         \question[5] 证明：四个连续整数的乘积加$1$是整数的平方。
         \begin{solution}{0.5cm}
@@ -193,9 +217,9 @@
             \[
                 \begin{aligned}
                      & \phantom{=}t(t+4x)+3x^2 \\
-                     & = t^2+4xt+3x^2 \\ 
+                     & = t^2+4xt+3x^2          \\
                      & = (t+x)(t+3x)
-                     & = (x^2+4x+3)(x^2+6x+3) \\ 
+                     & = (x^2+4x+3)(x^2+6x+3)  \\
                      & = (x+1)(x+3)(x^2+6x+3)
                 \end{aligned}
             \]
@@ -208,8 +232,8 @@
             \[
                 \begin{aligned}
                      & \phantom{=}t(t+10x)+9x^2 \\
-                     & = t^2+10xt+9x^2 \\ 
-                     & = (t+x)(t+9x) \\ 
+                     & = t^2+10xt+9x^2          \\
+                     & = (t+x)(t+9x)            \\
                      & = (x^2-2)(x^2+8x-2)
                 \end{aligned}
             \]
@@ -222,18 +246,54 @@
             \[
                 \begin{aligned}
                      & \phantom{=}(m-2n)(m-2)+(1-n)^2 \\
-                     & = m^2-2m-2mn+4n+n^2-2n+1 \\ 
-                     & = m^2-2mn+n^2-2m+2n+1 \\ %双十字
-                     & = (m-n-1)^2 \\ 
-                     & = (x+y-xy-1)^2 \\ 
+                     & = m^2-2m-2mn+4n+n^2-2n+1       \\
+                     & = m^2-2mn+n^2-2m+2n+1          \\ %双十字
+                     & = (m-n-1)^2                    \\
+                     & = (x+y-xy-1)^2                 \\
                      & = (1-y)^2(x-1)^2
                 \end{aligned}
             \]
         \end{solution}
         \vspace{3.5cm}
 
+        \question[5] 因式分解：$x^4+x^3+\frac{9}{4} x^2+x+1$
+        \begin{solution}{0.5cm}
+            \methodonly 原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}x^2\left(x^2+x+\frac{9}{4}+\frac{1}{x}+\frac{1}{x^2}\right) \\
+                     & = x^2\left[\left(x^2+2+\frac{1}{x^2}\right)+
+                        \left(x+\frac{1}{x}\right)+\frac{1}{4}\right]                         \\
+                     & = x^2\left[\left(x+\frac{1}{x}\right)^2+
+                        \left(x+\frac{1}{x}\right)+\frac{1}{4}\right]
+                \end{aligned}
+            \]
+            设$x+\frac{1}{x}=t$，原式可转化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}x^2\left(t^2+t+\frac{1}{4}\right)              \\
+                     & = x^2 \left(t+\frac{1}{2}\right)^2                        \\
+                     & = \left[x \left(t+\frac{1}{2}\right)\right]^2             \\
+                     & = \left[x \left(x+\frac{1}{x}+\frac{1}{2}\right)\right]^2 \\
+                     & = \frac{1}{4}(2x^2+x+2)^2
+                \end{aligned}
+            \]
+        \end{solution}
 
-
+        \question[5] 因式分解：$(x+y+z)^3+(3x-2y-3z)^3-(4x-y-2z)^3$
+        \begin{solution}{0.5cm}
+            \methodonly 设$x+y+z=a;3x-2y-3z=b$，那么$4x-y-2z=a+b$，原式可化为
+            \[
+                \begin{aligned}
+                     & \phantom{=}a^3+b^3-(a+b)^3 \\
+                     & = (a+b)(a^2-ab+b^2)-(a+b)^3 \\ 
+                     & = (a+b)[a^2-ab+b^2-(a+b)^2] \\ 
+                     & = (a+b)(-3ab) \\ 
+                     &-3(4x-y-2z)(x+y+z)(3x-2y-3z)
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
 
     \end{questions}
 \end{groups}
