@@ -14,11 +14,13 @@
 ## 编译环境
 * TeX Live 2019
 * BHCexam v1.6
+
 部分题目已包含答案，加入answers参数编译即可。
 
 ## 项目链接
-Gitee: [Gitee](https://gitee.com/guanqunchen/middle-school-math)
-GitHub: [GitHub](https://github.com/gavingqchen/MiddleSchoolMath)
+[Gitee](https://gitee.com/guanqunchen/middle-school-math)
+
+[GitHub](https://github.com/gavingqchen/MiddleSchoolMath)
 
 ## 感谢
 BHCexam 项目提供的Latex试卷排版文档类。
