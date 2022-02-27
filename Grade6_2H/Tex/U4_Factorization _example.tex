@@ -27,7 +27,7 @@
                   (x+1)(2x^2+3x-2) = 2x^3+5x^2+x-2
               \end{equation}
         \item 整式除法 \\
-              注意：由于\LaTeX \quad Polynom宏包的原因，多项式除法在竖式的表述和国内通常使用的长除法相差一个负号。故我们在长除竖式中的减法在这里需要用加法，下同。\\
+              注：由于\LaTeX \quad Polynom宏包的原因，多项式除法在竖式的表述和国内通常使用的长除法相差一个负号。故我们在长除竖式中的减法在这里需要用加法，下同。\\
               \polylongdiv{2x^3+5x^2+x-2 }{x+1} \\
               既$(2x^3+5x^2+x-2)\div (x+1)=(2x^2+3x-2)$
     \end{itemize}
@@ -54,14 +54,36 @@
         }
     }
     仍然以\ref{eq:sample}式为例，常数项$-2$有因数$\pm 1,\pm 2$，最高此项系数$2$有因数$\pm 1,\pm 2$，
-    那么如果存在有理数$a$使得$f(a)=0$，则$a$只可能在$\pm 1, \pm 2, \pm\frac{1}{2}$中选取（注，三次一定有实数解哦）。 
-    再看\ref{eq:sample}式， 完全因式分解后为$(x+1)(2x-1)(x+2)$，亦即有$f(-1)=0,f(\frac{1}{2})=0,f(-2)=0$
+    那么如果存在有理数$a$使得$f(a)=0$，则$a$只可能在$\pm 1, \pm 2, \pm\frac{1}{2}$中选取。 
+    再看\ref{eq:sample}式， 完全因式分解后为$(x+1)(2x-1)(x+2)$，亦即有$f(-1)=0,f(\frac{1}{2})=0,f(-2)=0$。
 
-
-    \group{关于试根法系数关系的证明}{}
-
-
+    \group{关于试根法中根和系数关系的证明}{}
+    设
+    \begin{equation}
+        \label{eq:fun2}
+        f(x)=a_0+a_1 x+a_2 x^2+a_3 x^3 +\cdots +a_n x^n 
+        (a_n\neq 0, a_i\in \mathbb{Z}, i=0,1,2\cdots n)
+    \end{equation}
+    存在有理根
+    \begin{equation}
+        \label{eq:fun2_ans}
+        c=\frac{q}{p}    
+    \end{equation}
+    使得$f(c)=0$, 其中$p,q$是互质的整数。将\ref{eq:fun2_ans}带入\ref{eq:fun2}得到
+    \begin{equation}
+        \label{eq:fun3}
+        a_0+a_1\frac{q}{p}+a_2\frac{q^2}{p^2}+\cdots +a_n\frac{q^n}{p^n} = 0
+    \end{equation}
+    两边都乘以$p^n$可以得到
+    \begin{equation}
+        \label{eq:fun4}
+        a_0p^n+a_1qp^{n-1}+\cdots+ a_{n-1}q^{n-1}p + a_nq^n = 0
+    \end{equation}
+    对于等式右边$p$可以整除$0$,故而$p$可以整除等式左边的多项式。又因为其他项都含有因数$p$,只需要考虑
+    最后一项$a_n q^n$。而又由于$p,q$互质，所以$p$可以整除$a_n$，亦即$p$是$a_n$的因数。\\ 
+    同理可得$q$是$a_0$的因数。
 \end{groups}
+
 
 \begin{groups}
     \group{试根法和因式定理例题}{}
