@@ -1,5 +1,5 @@
-\documentclass[windows,csize4]{BHCexam}
-%\documentclass[windows,csize4,answers]{BHCexam}
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
 
 \usepackage{multicol} % 分栏
 \usepackage{polynom} % 多项式除法
@@ -95,24 +95,38 @@
         \end{solution}
         \vspace{3.5cm}
 
-
-
-
-
-        \question[5]因式分解：$(x^2+x-1)^2+(x^2+x-1)-2$
+        \question[5] 若多项式$x^3+ax^2+bx+10$有一个因式是$x^2-3x-10$，求$a,b$的值。
         \begin{solution}{0.5cm}
-            \methodonly 设$x^2+x-1=u$，原式可化为
-            \[
-                \begin{aligned}
-                     & \phantom{=}u^2+u-2   \\
-                     & =(u-1)(u+2)          \\
-                     & =(x^2+x-2)(x^2+x+1)  \\
-                     & =(x-1)(x+2)(x^2+x+1)
-                \end{aligned}
-            \]
+            \methodonly 由题意可知$x=5$和$x=-2$时原多项式的值为$0$，带入后可得关于$a,b$方程组
+            解方程组可得$a=-4,b=-7$
         \end{solution}
-        \vspace{4cm}
+        \vspace{3.5cm}
 
+        \question[5] 因式分解：$x^3+x^2-10x-6$
+        \begin{solution}{0.5cm}
+            \methodonly 最高次项系数$1$，常数项$-6$，所以如果存在有理根，可能的值为
+            $x=\pm 1, x=\pm 2, x=\pm 3,x=\pm 6$经验证$x=3$时多项式的值为$0$。\\ 
+            \polylongdiv{x^3+x^2-10x-6}{x-3} \\ 
+            所以结果为$(x-3)(x^2+4x+2)$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 因式分解：$x^3+6x^2+11x+6$
+        \begin{solution}{0.5cm}
+            \methodonly $(x+1)(x+2)(x+3)$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 因式分解：$2x^3-5x^2+5x-3$
+        \begin{solution}{0.5cm}
+            \methodonly $f(\frac{3}{2})=0$ 所以$x-\frac{3}{2}$是一个因式。
+            为避免分数计算，乘以$2$后$2x-3$仍然是它的因式。
+            最后可得$(2x-3)(x^2-x+1)$
+        \end{solution}
+
+tobe continued
+系数为字母的情况，1和-1对应系数的关系:相加为0或者奇偶相减为0...
+是否把待定系数合并？
 
     \end{questions}
 \end{groups}

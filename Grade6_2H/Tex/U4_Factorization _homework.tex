@@ -1,5 +1,5 @@
-\documentclass[windows,csize4]{BHCexam}
-%\documentclass[windows,csize4,answers]{BHCexam}
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
 
 \usepackage{multicol} % 分栏
 \pagestyle{fancy}
@@ -20,30 +20,36 @@
     \group{因式分解}{}
     \begin{questions}[]
 
-        \question[5] 因式分解：$(x^2+x+1)(x^2+x+2)-12$
+        \question[5] 若多项式$2x^4-3x^3+ax^2+7x+b$有因式$x^2+x-2$，求$a:b$的值
         \begin{solution}{0.5cm}
-            \methodonly $(x^2+x-2)(x^2+x+5)$
+            \methodonly 由因式定理$f(-2)=0,f(1)=0$，带入可得$a=-12,b=6$，所以$a:b=-2$
         \end{solution}
         \vspace{3.5cm}
 
-        \question[5] 因式分解：$12(x+y)^2+11(x+y)(x-y)+2(x-y)^2$
+        \question[5] 因式分解：$x^3-x^2-17x-15$
         \begin{solution}{0.5cm}
-            \methodonly 设$x+y=m,x-y=n$，原式可化为
-            \[
-                \begin{aligned}
-                     & \phantom{=}12m^2+11mn+2n^2 \\
-                     & = (3m+2n)(4m+n)            \\
-                     & = (5x+y)(5x+3y)
-                \end{aligned}
-            \]
+            \methodonly $(x+1)(x-5)(x+3)$
         \end{solution}
         \vspace{3.5cm}
 
+        \question[5] 因式分解：$2x^4-x^3-6x^2-x+2$
+        \begin{solution}{0.5cm}
+            \methodonly $(2x-1)(x-2)(x+1)^2$
+        \end{solution}
+        \vspace{3.5cm}
+
+
+        tobe continued
+        
         \question[5] 因式分解：$na$
         \begin{solution}{0.5cm}
             \methodonly $na$
         \end{solution}
         \vspace{3.5cm}
+
+
+
+
     \end{questions}
 
 \end{groups}
