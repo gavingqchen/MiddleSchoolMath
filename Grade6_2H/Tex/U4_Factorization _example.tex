@@ -23,7 +23,7 @@
     \begin{itemize}
         \item 整式乘法
               \begin{equation}
-                \label{eq:sample}
+                  \label{eq:sample}
                   (x+1)(2x^2+3x-2) = 2x^3+5x^2+x-2
               \end{equation}
         \item 整式除法 \\
@@ -54,20 +54,20 @@
         }
     }
     仍然以\ref{eq:sample}式为例，常数项$-2$有因数$\pm 1,\pm 2$，最高此项系数$2$有因数$\pm 1,\pm 2$，
-    那么如果存在有理数$a$使得$f(a)=0$，则$a$只可能在$\pm 1, \pm 2, \pm\frac{1}{2}$中选取。 
+    那么如果存在有理数$a$使得$f(a)=0$，则$a$只可能在$\pm 1, \pm 2, \pm\frac{1}{2}$中选取。
     再看\ref{eq:sample}式， 完全因式分解后为$(x+1)(2x-1)(x+2)$，亦即有$f(-1)=0,f(\frac{1}{2})=0,f(-2)=0$。
 
     \group{关于试根法中根和系数关系的证明}{}
     设
     \begin{equation}
         \label{eq:fun2}
-        f(x)=a_0+a_1 x+a_2 x^2+a_3 x^3 +\cdots +a_n x^n 
+        f(x)=a_0+a_1 x+a_2 x^2+a_3 x^3 +\cdots +a_n x^n
         (a_n\neq 0, a_i\in \mathbb{Z}, i=0,1,2\cdots n)
     \end{equation}
     存在有理根
     \begin{equation}
         \label{eq:fun2_ans}
-        c=\frac{q}{p}    
+        c=\frac{q}{p}
     \end{equation}
     使得$f(c)=0$, 其中$p,q$是互质的整数。将\ref{eq:fun2_ans}带入\ref{eq:fun2}得到
     \begin{equation}
@@ -80,7 +80,7 @@
         a_0p^n+a_1qp^{n-1}+\cdots+ a_{n-1}q^{n-1}p + a_nq^n = 0
     \end{equation}
     对于等式右边$p$可以整除$0$,故而$p$可以整除等式左边的多项式。又因为其他项都含有因数$p$,只需要考虑
-    最后一项$a_n q^n$。而又由于$p,q$互质，所以$p$可以整除$a_n$，亦即$p$是$a_n$的因数。\\ 
+    最后一项$a_n q^n$。而又由于$p,q$互质，所以$p$可以整除$a_n$，亦即$p$是$a_n$的因数。\\
     同理可得$q$是$a_0$的因数。
 \end{groups}
 
@@ -105,8 +105,8 @@
         \question[5] 因式分解：$x^3+x^2-10x-6$
         \begin{solution}{0.5cm}
             \methodonly 最高次项系数$1$，常数项$-6$，所以如果存在有理根，可能的值为
-            $x=\pm 1, x=\pm 2, x=\pm 3,x=\pm 6$经验证$x=3$时多项式的值为$0$。\\ 
-            \polylongdiv{x^3+x^2-10x-6}{x-3} \\ 
+            $x=\pm 1, x=\pm 2, x=\pm 3,x=\pm 6$经验证$x=3$时多项式的值为$0$。\\
+            \polylongdiv{x^3+x^2-10x-6}{x-3} \\
             所以结果为$(x-3)(x^2+4x+2)$
         \end{solution}
         \vspace{3.5cm}
@@ -124,9 +124,50 @@
             最后可得$(2x-3)(x^2-x+1)$
         \end{solution}
 
-tobe continued
-系数为字母的情况，1和-1对应系数的关系:相加为0或者奇偶相减为0...
-是否把待定系数合并？
+        \question[5] 因式分解：$f(x)=6x^4+5x^3+3x^2-3x-2$
+        \begin{solution}{0.5cm}
+            \methodonly $a_0=-2, a_n=6$ 所以$f(x)$的有理根只可能为
+            $\pm 1, \pm 2, \pm \frac{1}{2}, \pm \frac{1}{3}, \pm \frac{2}{3}, \pm \frac{1}{6}$ \\
+            经检验$-\frac{1}{2}$是一个根，所以$2x+1$是$f(x)$的因式，可得 \\
+            \[(2x+1)(3x^3+x^2+x-2)\] \\
+            对$3x^3+x^2+x-2$来说$\frac{2}{3}$是一个根，再一次用试根法最后可得 \\
+            \[(2x+1)(3x-2)(x^2+x+1)\]
+        \end{solution}
+
+        \question[5] 系数为字母的情况因式分解：$x^3-(a+b+c)x^2+(ab+bc+ca)x-abc$
+        \begin{solution}{0.5cm}
+            \methodonly 常数项为$-abc$故而可能的因数为
+            \[\pm a, \pm b, \pm c, \pm ab, \pm bc, \pm ca, \pm abc \]
+            经验证$a$是一个根，即$x-a$是一个因式
+            \[
+                \begin{aligned}
+                     & \phantom{=} x^3-(a+b+c)x^2+(ab+bc+ca)x-abc \\
+                     & =(x^3-ax^2)-[(b+c)x^2-a(b+c)x]+(bcx-abc)   \\
+                     & =(x-a)[x^2-(b+c)x+bc]                      \\
+                     & =(x-a)(x-b)(x-c)
+                \end{aligned}
+            \]
+        \end{solution}
+
+        \question[5] 因式分解：$(l+m)x^3+(3l+2m-n)x^2+(2l-m-3n)x-2(m+n)$
+        \begin{solution}{0.5cm}
+            \methodonly 当多项式所有项的系数相加和为$0$，那么$1$一定是它的根；当多项式
+            偶次项的系数的和减去奇次项系数的和等于$0$，那么$-1$一定是它的根。\uwave{想一想为什么?}
+            $-(l+m)+(3l+2m-n)-(2l-m-3n)-2(m+n)=0$ \\ 
+            用多项式长除法可得
+            \[
+                (x+1)[(l+m)x^2+(2l+m-n)x-2(m+n)]
+            \]
+            然后对$(l+m)x^2+(2l+m-n)x-2(m+n)$十字相乘 \\ 
+            \[
+                (x+1)(x+2[(l+m)x-(m+n)])
+            \]
+
+        \end{solution}
+
+        tobe continued
+        余式定理简介， 
+        待定系数
 
     \end{questions}
 \end{groups}
