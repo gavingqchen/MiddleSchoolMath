@@ -1,11 +1,11 @@
-%\documentclass[windows,csize4]{BHCexam}
-\documentclass[windows,csize4,answers]{BHCexam}
+\documentclass[windows,csize4]{BHCexam}
+%\documentclass[windows,csize4,answers]{BHCexam}
 
 \usepackage{multicol} % 分栏
 \pagestyle{fancy}
 \fancyfoot[C]{\kaishu \small 第 \thepage 页 共 \pageref{lastpage} 页}
 %\fancyhead[L]{\includegraphics[width=2cm]{qrcode.png}}
-\title{因式分解 - 试根法，因式定理作业}
+\title{因式分解 - 试根法，因式定理和待定系数法作业}
 %\subtitle{数学文科试卷}
 %\notice{满分150分, 120分钟完成, \\	允许使用计算器，答案一律写在答题纸上.}
 %\author{Gavin Chen}
@@ -64,20 +64,35 @@
         \end{solution}
         \vspace{3.5cm}
 
-
-
-
-        
-        tobe continued
-        
-        \question[5] 因式分解：$na$
+        \question[5] 因式分解：$x^4+4x^3+3x^2+4x+2$
         \begin{solution}{0.5cm}
-            \methodonly $na$
+            \methodonly $(x^2+1)(x^2+4x+2)$
         \end{solution}
         \vspace{3.5cm}
 
-
-
+        \question[5] 多项式$x^2+axy+by^2-5x+y+6$的一个因式是$x+y-2$，试确定$a+b$的值.
+        \begin{solution}{0.5cm}
+            \methodonly 由已知可以设另一个因式为$x+by-3$. 所以
+            \[
+                x^2+axy+by^2-5x+y+6=(x+y-2)(x+by-3)=x^2+(b+1)xy+by^2-5x-(2b+3)y+6
+            \]
+            比较系数
+            \[
+                \begin{cases}
+                    b+1=a    \\
+                    2b+3=-1 \\
+                \end{cases}
+            \]
+            所以
+            \[
+                \begin{cases}
+                    a=-1    \\
+                    b=-2 \\
+                \end{cases}
+            \]
+            即$a+b=-3$
+            \end{solution}
+               
 
     \end{questions}
 

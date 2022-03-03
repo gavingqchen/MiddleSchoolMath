@@ -1,18 +1,18 @@
-%\documentclass[windows,csize4]{BHCexam}
-\documentclass[windows,csize4,answers]{BHCexam}
+\documentclass[windows,csize4]{BHCexam}
+%\documentclass[windows,csize4,answers]{BHCexam}
 
 \usepackage{multicol} % 分栏
 \usepackage{polynom} % 多项式除法
 \pagestyle{fancy}
 \fancyfoot[C]{\kaishu \small 第 \thepage 页 共 \pageref{lastpage} 页}
 %\fancyhead[L]{\includegraphics[width=2cm]{qrcode.png}}
-\title{因式分解 - 试根法，因式定理}
+\title{因式分解 - 试根法，因式定理和待定系数法}
 %\subtitle{数学文科试卷}
 %\notice{满分150分, 120分钟完成, \\	允许使用计算器，答案一律写在答题纸上.}
 %\author{Gavin Chen}
 %\date{\today}
 \usepackage{enumerate} % 编号
-
+\usepackage{cases}
 
 \begin{document}
 
@@ -123,6 +123,7 @@
             为避免分数计算，乘以$2$后$2x-3$仍然是它的因式。
             最后可得$(2x-3)(x^2-x+1)$
         \end{solution}
+        \vspace{3.5cm}
 
         \question[5] 因式分解：$f(x)=6x^4+5x^3+3x^2-3x-2$
         \begin{solution}{0.5cm}
@@ -133,6 +134,7 @@
             对$3x^3+x^2+x-2$来说$\frac{2}{3}$是一个根，再一次用试根法最后可得 \\
             \[(2x+1)(3x-2)(x^2+x+1)\]
         \end{solution}
+        \vspace{3.5cm}
 
         \question[5] 系数为字母的情况因式分解：$x^3-(a+b+c)x^2+(ab+bc+ca)x-abc$
         \begin{solution}{0.5cm}
@@ -148,26 +150,123 @@
                 \end{aligned}
             \]
         \end{solution}
+        \vspace{3.5cm}
 
         \question[5] 因式分解：$(l+m)x^3+(3l+2m-n)x^2+(2l-m-3n)x-2(m+n)$
         \begin{solution}{0.5cm}
             \methodonly 当多项式所有项的系数相加和为$0$，那么$1$一定是它的根；当多项式
             偶次项的系数的和减去奇次项系数的和等于$0$，那么$-1$一定是它的根。\uwave{想一想为什么?}
-            $-(l+m)+(3l+2m-n)-(2l-m-3n)-2(m+n)=0$ \\ 
+            $-(l+m)+(3l+2m-n)-(2l-m-3n)-2(m+n)=0$ \\
             用多项式长除法可得
             \[
                 (x+1)[(l+m)x^2+(2l+m-n)x-2(m+n)]
             \]
-            然后对$(l+m)x^2+(2l+m-n)x-2(m+n)$十字相乘 \\ 
+            然后对$(l+m)x^2+(2l+m-n)x-2(m+n)$十字相乘 \\
             \[
                 (x+1)(x+2[(l+m)x-(m+n)])
             \]
 
         \end{solution}
+        \vspace{3.5cm}
 
-        tobe continued
-        余式定理简介， 
-        待定系数
+    \end{questions}
+\end{groups}
+
+\begin{groups}
+
+\end{groups}
+\group{待定系数法}{}
+\fbox
+{
+    \parbox{\textwidth}
+    {
+        定理：一个整系数多项式如果能分解为两个有理系数的因式的乘积，那么也一定能分解为两个整系数的因式的积。
+    }
+}
+根据以上定理，对于整系数的高次多项式因式分解，我们只需要讨论整系数的情况就可以了。
+\begin{groups}
+    \group{待定系数法例题}{}
+    \begin{questions}
+
+        \question[5] 分解因式：$x^4+x^3+2x^2-x+3$
+        \begin{solution}{0.5cm}
+            \methodonly 首先尝试试根法，经验证$\pm 1, \pm 3$都不满足条件$f(x)=0$的条件
+            故而我们可以设
+            \begin{equation}
+                x^4+x^3+2x^2-x+3 = (x^2+ax+b)(x^2+cx+d) \label{eq:q_1}
+            \end{equation}
+            比较两边系数，可以得到
+            \begin{numcases}{}
+                a+c=1 \label{eq:q_2} \\
+                b+d+ac=2 \label{eq:q_3} \\
+                bc+ad=-1 \label{eq:q_4} \\
+                bd=3 \label{eq:q_5}
+            \end{numcases}
+            这种方程组一般不易求解，但由于我们只需要考虑整系数的情况，那么
+            \begin{numcases}{}
+                b=1 \label{eq:q_6} \\
+                d=3 \label{eq:q_7}
+            \end{numcases}
+            或者
+            \begin{numcases}{}
+                b=-1 \label{eq:q_6} \\
+                d=-3 \label{eq:q_7}
+            \end{numcases}
+            注：$b=3,d=1$ 和$b=-3,d=-1$忽略，想一想为什么 \\
+            将$b=1,d=3$代入后可得$a=-1,c=2$, 故而
+            \[
+                x^4+x^3+2x^2-x+3 = (x^2-x+1)(x^2+2x+3)
+            \]
+            若将$b=-11,d=-3$带入原方程组是矛盾的，舍去。故而最终答案唯一，即
+            \[
+                x^4+x^3+2x^2-x+3 = (x^2-x+1)(x^2+2x+3)
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 若$13x^3+mx^2+11x+n$能被$13x^2-6x+5$整除，求$m,n$的值.
+        \begin{solution}{0.5cm}
+            \methodonly 三次除以二次，商式最高为一次。可以设商式为$(x+a)$ 即
+            \[
+                \begin{aligned}
+                     & \phantom{=}13x^3+mx^2+11x+n = (x+a)(13x^2-6x+5) \\
+                     & =13x^3+(13a-6)x^2+(5-6a)x+5a
+                \end{aligned}
+            \]
+            比较两边系数，可以得到
+            \begin{numcases}{}
+                13a-6=m \label{eq:eq2_1} \\
+                5-6a=11 \label{eq:eq2_2} \\ 
+                5a=n \label{eq:eq2_3}
+            \end{numcases}
+            \[
+            \begin{cases}
+                a=-1  \\
+                m=-19  \\ 
+                n=-5 
+            \end{cases}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        % 此题放最后一题
+        \question[5] 已知$x^5-5qx+4r$有因式$(x-c)^2$，试说明$q^5=r^4$的理由.
+        \begin{solution}{0.5cm}
+            \methodonly 设
+            \[
+                x^5-5qx+4r=(x-c)^2(x^3+ax^2+bx+\frac{4r}{c^2})
+            \]
+            展开后比较系数
+            \begin{numcases}{}
+                a-2c=0 \label{eq:num1} \\
+                c^2+b-2ac=0 \label{eq:num2} \\
+                ac^2-2bc+\frac{4r}{c^2}=0 \label{eq:num3} \\
+                \frac{8r}{c}-bc^2=5q \label{eq:num4}
+            \end{numcases}
+            由\ref{eq:num1}和\ref{eq:num2}可得$a=2c,b=3c^2$ \\
+            代入\ref{eq:num3}和\ref{eq:num4}可得$r=c^5,q=c^4$ \\
+            所以$q^5=r^4$
+        \end{solution}
 
     \end{questions}
 \end{groups}

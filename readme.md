@@ -10,20 +10,25 @@
 * U1 整式恒等变换1
 * U2 因式分解：双十字相乘和主元法
 * U3 因式分解：换元法 
+* U4 因式分解：试根法，因式定理，待定系数法
+
 
 ## 编译环境
 * TeX Live 2019
 * BHCexam v1.6
 
+XeLaTeX 编译
+
 部分题目已包含答案，加入answers参数编译即可。
 
+也可直接使用Output文件夹中编译好的pdf文件。
 ## 项目链接
 [Gitee](https://gitee.com/guanqunchen/middle-school-math)
 
 [GitHub](https://github.com/gavingqchen/MiddleSchoolMath)
 
 ## 感谢
-BHCexam 项目提供的Latex试卷排版文档类。
+BHCexam 项目提供的LaTeX试卷排版文档类。
 
 项目主页:[BHCexam](https://github.com/mathedu4all/bhcexam)
 
