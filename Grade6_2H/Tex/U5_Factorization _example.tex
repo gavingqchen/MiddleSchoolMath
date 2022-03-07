@@ -60,12 +60,39 @@
         例如：$x^2y+y^2z+z^2x$是轮换式，但不是对称式。
         \item 关于相同字母的对称式（轮换式）的和、差、积、商（假定除式不为零且能整除）仍然是对称式（轮换式）。\\ 
         例如：$a+b+c$和$abc$是关于$a,b,c$ 的对称式，他们的和$a+b+c+abc$，差$a+b+c-abc$,积$abc(a+b+c)$，商$\frac{a+b+c}{abc}$也都是对称式。
-        \item to be continued
+        \item 若对称式或者轮换式中含有某种形式的式子，则必定也含有这种形式的同形式。例如，关于$x,y,z$的二次齐次式中若含有$ax^2$，则必定含有$ay^2,az^2$。
+        所以关于$x,y,z$的二次齐次对称式的一般形式是$a(x^2+y^2+zY2)+b(xy+yz+zx)$，其中$a,b$为系数。
     \end{itemize}
+
+    一般性的，关于$x,y$的齐次对称式（$a,b$为系数）是：
+    \begin{itemize}
+        \item 一次$a(x+y)$
+        \item 二次$a(x^2+y^2)+bxy$
+        \item 三次$a(x^3+y^3)+b(x^2y+y^2x)$
+    \end{itemize}
+    关于$x,y,z$的齐次对称式（$a,b,c$为系数）是：
+    \begin{itemize}
+        \item 一次$a(x+y+z)$
+        \item 二次$a(x^2+y^2+z^2)+b(xy+yz+zx)$
+        \item 三次$a(x^3+y^3+z^3)+b(x^2y+x^2z+y^2x+y^2z+z^2x+z^2y)+cxyz$
+    \end{itemize}
+
+    \group{对称式和轮换式因式分解的一般方法}{}
+    因为对称多项式一定是轮换多项式，故而研究对称多项式的因式分解只需要研究轮换多项式因式分解就可以了。
+    \begin{itemize}
+        \item 选定一个字母（如$x$）做主元，其余看成常数。
+        \item 利用因式定理确定它的因式，再利用轮换式性质，得到几个同类型的因式。
+        例如，若$x-y$是轮换式的因式，那么$y-z$，$z-x$也一定是它的因式。
+        \item 结合待定系数法求出系数。（通常可以只考虑特定几项或者采用特殊值的方法求解）
+    \end{itemize}
+    对于三个字母$x,y,z$的轮换多项式，常见因式有$xyz$，$(x+y+z)$，$(x+y)(y+z)(z+x)$，$(x-y)(y-z)(z-x)$，
+    $(x+y-z)(y+z-x)(z+x-y)$等
+
 
     \group{对称式和轮换式例题}{}
     \begin{questions}[]
-        \question[5] 若多项式
+        \question[5] 下面那些是轮换式，那些是对称式：\\ 
+        $x+y+z$，$xyz$，$x^3+y^3+z^3-3xyz$，$x^2y+y^2x$，$x^2y+y^2z+z^2x$，$\frac{x^2}{x-1}+\frac{y^2}{y-z}$
         \begin{solution}{0.5cm}
             \methodonly 由$m=5$。
         \end{solution}
@@ -75,104 +102,7 @@
     \end{questions}
 \end{groups}
 
-\begin{groups}
 
-\end{groups}
-\group{待定系数法}{}
-\fbox
-{
-    \parbox{\textwidth}
-    {
-        定理：一个整系数多项式如果能分解为两个有理系数的因式的乘积，那么也一定能分解为两个整系数的因式的积。
-    }
-}
-根据以上定理，对于整系数的高次多项式因式分解，我们只需要讨论整系数的情况就可以了。
-\begin{groups}
-    \group{待定系数法例题}{}
-    \begin{questions}
-
-        \question[5] 分解因式：$x^4+x^3+2x^2-x+3$
-        \begin{solution}{0.5cm}
-            \methodonly 首先尝试试根法，经验证$\pm 1, \pm 3$都不满足条件$f(x)=0$的条件
-            故而我们可以设
-            \begin{equation}
-                x^4+x^3+2x^2-x+3 = (x^2+ax+b)(x^2+cx+d) \label{eq:q_1}
-            \end{equation}
-            比较两边系数，可以得到
-            \begin{numcases}{}
-                a+c=1 \label{eq:q_2} \\
-                b+d+ac=2 \label{eq:q_3} \\
-                bc+ad=-1 \label{eq:q_4} \\
-                bd=3 \label{eq:q_5}
-            \end{numcases}
-            这种方程组一般不易求解，但由于我们只需要考虑整系数的情况，那么
-            \begin{numcases}{}
-                b=1 \label{eq:q_6} \\
-                d=3 \label{eq:q_7}
-            \end{numcases}
-            或者
-            \begin{numcases}{}
-                b=-1 \label{eq:q_6} \\
-                d=-3 \label{eq:q_7}
-            \end{numcases}
-            注：$b=3,d=1$ 和$b=-3,d=-1$忽略，想一想为什么 \\
-            将$b=1,d=3$代入后可得$a=-1,c=2$, 故而
-            \[
-                x^4+x^3+2x^2-x+3 = (x^2-x+1)(x^2+2x+3)
-            \]
-            若将$b=-11,d=-3$带入原方程组是矛盾的，舍去。故而最终答案唯一，即
-            \[
-                x^4+x^3+2x^2-x+3 = (x^2-x+1)(x^2+2x+3)
-            \]
-        \end{solution}
-        \vspace{3.5cm}
-
-        \question[5] 若$13x^3+mx^2+11x+n$能被$13x^2-6x+5$整除，求$m,n$的值.
-        \begin{solution}{0.5cm}
-            \methodonly 三次除以二次，商式最高为一次。可以设商式为$(x+a)$ 即
-            \[
-                \begin{aligned}
-                     & \phantom{=}13x^3+mx^2+11x+n = (x+a)(13x^2-6x+5) \\
-                     & =13x^3+(13a-6)x^2+(5-6a)x+5a
-                \end{aligned}
-            \]
-            比较两边系数，可以得到
-            \begin{numcases}{}
-                13a-6=m \label{eq:eq2_1} \\
-                5-6a=11 \label{eq:eq2_2} \\ 
-                5a=n \label{eq:eq2_3}
-            \end{numcases}
-            \[
-            \begin{cases}
-                a=-1  \\
-                m=-19  \\ 
-                n=-5 
-            \end{cases}
-            \]
-        \end{solution}
-        \vspace{3.5cm}
-
-        % 此题放最后一题
-        \question[5] 已知$x^5-5qx+4r$有因式$(x-c)^2$，试说明$q^5=r^4$的理由.
-        \begin{solution}{0.5cm}
-            \methodonly 设
-            \[
-                x^5-5qx+4r=(x-c)^2(x^3+ax^2+bx+\frac{4r}{c^2})
-            \]
-            展开后比较系数
-            \begin{numcases}{}
-                a-2c=0 \label{eq:num1} \\
-                c^2+b-2ac=0 \label{eq:num2} \\
-                ac^2-2bc+\frac{4r}{c^2}=0 \label{eq:num3} \\
-                \frac{8r}{c}-bc^2=5q \label{eq:num4}
-            \end{numcases}
-            由\ref{eq:num1}和\ref{eq:num2}可得$a=2c,b=3c^2$ \\
-            代入\ref{eq:num3}和\ref{eq:num4}可得$r=c^5,q=c^4$ \\
-            所以$q^5=r^4$
-        \end{solution}
-
-    \end{questions}
-\end{groups}
 
 \label{lastpage}
 \end{document}
