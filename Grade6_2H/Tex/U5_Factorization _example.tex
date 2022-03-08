@@ -94,10 +94,56 @@
         \question[5] 下面那些是轮换式，那些是对称式：\\ 
         $x+y+z$，$xyz$，$x^3+y^3+z^3-3xyz$，$x^2y+y^2x$，$x^2y+y^2z+z^2x$，$\frac{x^2}{x-1}+\frac{y^2}{y-z}$
         \begin{solution}{0.5cm}
-            \methodonly 由$m=5$。
+            \methodonly 略。
         \end{solution}
         \vspace{3.5cm}
 
+        \question[5] 分解因式$x^2(y-z)+y^2(z-x)+z^2(x-y)$
+        \begin{solution}{0.5cm}
+            \methodonly 显然这是一个关于$x,y,z$轮换式。
+            把$x$作为主元，当$x=y$时，$f(y)=y^2(y-z)+y^2(z-y)+z^2(y-y)=0$，根据因式定理$x-y$是$f(x,y,z)$的一个因式。 \\ 
+            由于它是轮换式，同理$y-z$和$z-x$也是它的因式。 故而$(x-y)(y-z)(z-x)$是它的因式。\\ 
+            又由于原式最高次为三次，所以两者只相差一个常数项，即： \\ 
+            \[ 
+                f(x,y,z)= x^2(y-z)+y^2(z-x)+z^2(x-y) = k(x-y)(y-z)(z-x) 
+            \]
+            此时由于是轮换式，我们只需要考虑某个特定项，而无需展开，比如仅考虑$x^2y$项，左边系数为$1$，右边系数为$-k$，故而可得$k=-1$。 \\ 
+            所以
+            \[ 
+                x^2(y-z)+y^2(z-x)+z^2(x-y) = -(x-y)(y-z)(z-x) 
+            \]
+
+        \end{solution}
+        \vspace{3.5cm}
+        
+        \question[5] 分解因式$a^3(b-c)+b^3(c-a)+c^3(a-b)$
+        \begin{solution}{0.5cm}
+            \methodonly 显然这是一个关于$a,b,c$轮换式。与上一题类似，它有三个因式$(a-b)(b-c)(c-a)$ \\ 
+            由于原式是四次多项式，而三个因式相乘只是三次多项式，两者差一次。考虑到它是轮换式，它已知因式也是轮换式，故而剩下的一次多项式也是轮换式，所以只可能是$a+b+c$
+            所以可得
+            \[
+                a^3(b-c)+b^3(c-a)+c^3(a-b)= k(a+b+c)(a-b)(b-c)(c-a)
+            \]
+
+            只考虑$a^3b$项，左边系数$1$，右边为$-ka^3b$，所以$k=-1$。
+
+            当然们这里我们也可以换一种思考方式。既然等式恒成立，我们也可以选取特定的$a,b,c$来求解$k$。
+            （注：选取特定值的时候得保证多项式不为0，不然就无法找出系数$k$了） \\
+            这里可以选取$a=2,b=1,c=0$，代入后得到
+            \[
+                8-2+0=k\cdot 3  \cdot (-2) 
+            \]
+            所以$k=-1$。注意这两种方法可以选取一种，甚至可以同时结合起来根据情况使用。
+        \end{solution}
+        \vspace{3.5cm}
+
+
+
+        \question[5] $a$
+        \begin{solution}{0.5cm}
+            \methodonly 略。
+        \end{solution}
+        \vspace{3.5cm}
 
     \end{questions}
 \end{groups}
