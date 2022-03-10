@@ -1,5 +1,5 @@
-\documentclass[windows,csize4]{BHCexam}
-%\documentclass[windows,csize4,answers]{BHCexam}
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
 
 \usepackage{multicol} % 分栏
 \pagestyle{fancy}
@@ -17,14 +17,61 @@
 
 
 \begin{groups}
-    \group{分解因式}{}
+    \group{对称式和轮换式}{}
     \begin{questions}[]
 
-        \question[5] 若多项式
+        \question[5] 分解因式$(x-y)^3+(y-z)^3+(z-x)^3$
         \begin{solution}{0.5cm}
-            \methodonly $a$
+            \method $x=y$时为$f(x,y,z)=0$所以有因式$(x-y)(y-z)(z-x)$。又原式为三次齐次多项式，
+            可以设
+            \[
+                f(x,y,z)=(x-y)^3+(y-z)^3+(z-x)^3=k(x-y)(y-z)(z-x)
+            \]
+            令$x=1, y=2, z=3$得到$k=3$，所以
+            \[
+                (x-y)^3+(y-z)^3+(z-x)^3=3(x-y)(y-z)(z-x)
+            \]
+            \method 直接欧拉公式
+            \[
+                (x-y)^3+(y-z)^3+(z-x)^3 - 3[(x-y)(y-z)(z-x)]= [(x-y)+(y-z)+(z-x)][\cdots]
+            \]
+            等式右边第一项为$0$，所以
+            \[
+                (x-y)^3+(y-z)^3+(z-x)^3 - 3[(x-y)(y-z)(z-x)]
+            \]
+            注意，对于欧拉公式
+            \[
+                a^3+b^3+c^3-3abc=(a+b+c)[a^2+b^2+c^2-ab-bc-ca]
+            \]
+            如果$a+b+c=0$, 那么$a^3+b^3+c^3=3abc$。此结论经常用到。
         \end{solution}
         \vspace{3.5cm}
+
+        \question[5] 分解因式$(a+b+c)^4-(b+c)^4-(c+a)^4-(a+b)^4+a^4+b^4+c^4$
+        \begin{solution}{0.5cm}
+            \methodonly $a=0$时为$f(a,b,c)=0$所以有因式$abc$。又因为四次，可以设
+            \[
+                f(a,b,c)=(a+b+c)^4-(b+c)^4-(c+a)^4-(a+b)^4+a^4+b^4+c^4=kabc(a+b+c)
+            \]
+            令$a=b=c=1$得到$k=12$，所以
+            \[
+                (a+b+c)^4-(b+c)^4-(c+a)^4-(a+b)^4+a^4+b^4+c^4=12abc(a+b+c)
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 分解因式$(x+y+z)^3-x^3-y^3-z^3$
+        \begin{solution}{0.5cm}
+            \methodonly 当$x=-y$时，$f(x,y,z)=0$，故而$x+y$是它的因式，又由于轮换式，
+            所以$(x+y)(y+z)(z+x)$是它的因式。考虑到原式为三次多项式，故而可设
+            \[
+                (x+y+z)^3-x^3-y^3-z^3=k(x+y)(y+z)(z+x)
+            \]
+            令$x=y=z=1$可得$k=3$，所以
+            \[
+                (x+y+z)^3-x^3-y^3-z^3=3(x+y)(y+z)(z+x)
+            \]
+        \end{solution}
 
 
     \end{questions}
