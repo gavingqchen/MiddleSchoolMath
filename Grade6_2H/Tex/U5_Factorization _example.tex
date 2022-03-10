@@ -1,5 +1,5 @@
-\documentclass[windows,csize4]{BHCexam}
-%\documentclass[windows,csize4,answers]{BHCexam}
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
 
 \usepackage{multicol} % 分栏
 \usepackage{polynom} % 多项式除法
@@ -20,7 +20,7 @@
 
 \begin{groups}
     \group{对称式和轮换式概念}{}
-    对称式是代数中常常遇到的 一种特殊形式代数式。\\ 
+    对称式是代数中常常遇到的 一种特殊形式代数式。\\
     \fbox
     {
         \parbox{\textwidth}
@@ -30,7 +30,7 @@
         }
     }
     例如$a+b+c,x^2+2xy+y^2,\frac{1}{ab},a^3+b^3+c^3-3abc$等都是对称式，但是
-    $a-b-c,\frac{1}{x-y},a+2b+3c$就不是对称式。 \\ 
+    $a-b-c,\frac{1}{x-y},a+2b+3c$就不是对称式。 \\
 
     \fbox
     {
@@ -41,7 +41,7 @@
         }
     }
     例如，$x^2y+y^2z+z^2x$ 中将$x$以$y$代换，$y$以$z$代换，$z$以$x$代换，可以得到
-    $y^2z+z^2x+x^2y$，它和原式完全相同，所以它是关于$x,y,z$的轮换式。又比如$x^2+y^2+z^2$等等。 \\ 
+    $y^2z+z^2x+x^2y$，它和原式完全相同，所以它是关于$x,y,z$的轮换式。又比如$x^2+y^2+z^2$等等。 \\
 
     关于其次多项式的概念： \\
     \fbox
@@ -56,12 +56,12 @@
 
     \group{对称式和轮换式性质}{}
     \begin{itemize}
-        \item 对称式一定是轮换式，但是轮换式不一定是对称式。（想一想为什么？）\\ 
-        例如：$x^2y+y^2z+z^2x$是轮换式，但不是对称式。
-        \item 关于相同字母的对称式（轮换式）的和、差、积、商（假定除式不为零且能整除）仍然是对称式（轮换式）。\\ 
-        例如：$a+b+c$和$abc$是关于$a,b,c$ 的对称式，他们的和$a+b+c+abc$，差$a+b+c-abc$,积$abc(a+b+c)$，商$\frac{a+b+c}{abc}$也都是对称式。
+        \item 对称式一定是轮换式，但是轮换式不一定是对称式。（想一想为什么？）\\
+              例如：$x^2y+y^2z+z^2x$是轮换式，但不是对称式。
+        \item 关于相同字母的对称式（轮换式）的和、差、积、商（假定除式不为零且能整除）仍然是对称式（轮换式）。\\
+              例如：$a+b+c$和$abc$是关于$a,b,c$ 的对称式，他们的和$a+b+c+abc$，差$a+b+c-abc$,积$abc(a+b+c)$，商$\frac{a+b+c}{abc}$也都是对称式。
         \item 若对称式或者轮换式中含有某种形式的式子，则必定也含有这种形式的同形式。例如，关于$x,y,z$的二次齐次式中若含有$ax^2$，则必定含有$ay^2,az^2$。
-        所以关于$x,y,z$的二次齐次对称式的一般形式是$a(x^2+y^2+zY2)+b(xy+yz+zx)$，其中$a,b$为系数。
+              所以关于$x,y,z$的二次齐次对称式的一般形式是$a(x^2+y^2+zY2)+b(xy+yz+zx)$，其中$a,b$为系数。
     \end{itemize}
 
     一般性的，关于$x,y$的齐次对称式（$a,b$为系数）是：
@@ -82,16 +82,16 @@
     \begin{itemize}
         \item 选定一个字母（如$x$）做主元，其余看成常数。
         \item 利用因式定理确定它的因式，再利用轮换式性质，得到几个同类型的因式。
-        例如，若$x-y$是轮换式的因式，那么$y-z$，$z-x$也一定是它的因式。
+              例如，若$x-y$是轮换式的因式，那么$y-z$，$z-x$也一定是它的因式。
         \item 结合待定系数法求出系数。（通常可以只考虑特定几项或者采用特殊值的方法求解）
     \end{itemize}
     对于三个字母$x,y,z$的轮换多项式，常见因式有$xyz$，$(x+y+z)$，$(x+y)(y+z)(z+x)$，$(x-y)(y-z)(z-x)$，
     $(x+y-z)(y+z-x)(z+x-y)$等
 
 
-    \group{对称式和轮换式例题}{}
+    \group{对称式和轮换式例题1}{}
     \begin{questions}[]
-        \question[5] 下面那些是轮换式，那些是对称式：\\ 
+        \question[5] 下面那些是轮换式，那些是对称式：\\
         $x+y+z$，$xyz$，$x^3+y^3+z^3-3xyz$，$x^2y+y^2x$，$x^2y+y^2z+z^2x$，$\frac{x^2}{x-1}+\frac{y^2}{y-z}$
         \begin{solution}{0.5cm}
             \methodonly 略。
@@ -101,24 +101,24 @@
         \question[5] 分解因式$x^2(y-z)+y^2(z-x)+z^2(x-y)$
         \begin{solution}{0.5cm}
             \methodonly 显然这是一个关于$x,y,z$轮换式。
-            把$x$作为主元，当$x=y$时，$f(y)=y^2(y-z)+y^2(z-y)+z^2(y-y)=0$，根据因式定理$x-y$是$f(x,y,z)$的一个因式。 \\ 
-            由于它是轮换式，同理$y-z$和$z-x$也是它的因式。 故而$(x-y)(y-z)(z-x)$是它的因式。\\ 
-            又由于原式最高次为三次，所以两者只相差一个常数项，即： \\ 
-            \[ 
-                f(x,y,z)= x^2(y-z)+y^2(z-x)+z^2(x-y) = k(x-y)(y-z)(z-x) 
+            把$x$作为主元，当$x=y$时，$f(y)=y^2(y-z)+y^2(z-y)+z^2(y-y)=0$，根据因式定理$x-y$是$f(x,y,z)$的一个因式。 \\
+            由于它是轮换式，同理$y-z$和$z-x$也是它的因式。 故而$(x-y)(y-z)(z-x)$是它的因式。\\
+            又由于原式最高次为三次，所以两者只相差一个常数项，即： \\
+            \[
+                f(x,y,z)= x^2(y-z)+y^2(z-x)+z^2(x-y) = k(x-y)(y-z)(z-x)
             \]
-            此时由于是轮换式，我们只需要考虑某个特定项，而无需展开，比如仅考虑$x^2y$项，左边系数为$1$，右边系数为$-k$，故而可得$k=-1$。 \\ 
+            此时由于是轮换式，我们只需要考虑某个特定项，而无需展开，比如仅考虑$x^2y$项，左边系数为$1$，右边系数为$-k$，故而可得$k=-1$。 \\
             所以
-            \[ 
-                x^2(y-z)+y^2(z-x)+z^2(x-y) = -(x-y)(y-z)(z-x) 
+            \[
+                x^2(y-z)+y^2(z-x)+z^2(x-y) = -(x-y)(y-z)(z-x)
             \]
 
         \end{solution}
         \vspace{3.5cm}
-        
+
         \question[5] 分解因式$a^3(b-c)+b^3(c-a)+c^3(a-b)$
         \begin{solution}{0.5cm}
-            \methodonly 显然这是一个关于$a,b,c$轮换式。与上一题类似，它有三个因式$(a-b)(b-c)(c-a)$ \\ 
+            \methodonly 显然这是一个关于$a,b,c$轮换式。与上一题类似，它有三个因式$(a-b)(b-c)(c-a)$ \\
             由于原式是四次多项式，而三个因式相乘只是三次多项式，两者差一次。考虑到它是轮换式，它已知因式也是轮换式，故而剩下的一次多项式也是轮换式，所以只可能是$a+b+c$
             所以可得
             \[
@@ -131,17 +131,94 @@
             （注：选取特定值的时候得保证多项式不为0，不然就无法找出系数$k$了） \\
             这里可以选取$a=2,b=1,c=0$，代入后得到
             \[
-                8-2+0=k\cdot 3  \cdot (-2) 
+                8-2+0=k\cdot 3  \cdot (-2)
             \]
             所以$k=-1$。注意这两种方法可以选取一种，甚至可以同时结合起来根据情况使用。
         \end{solution}
         \vspace{3.5cm}
 
-
-
-        \question[5] $a$
+        \question[5] 分解因式$x^3+y^3+z^3-3xyz$
         \begin{solution}{0.5cm}
-            \methodonly 略。
+            \methodonly 当$x=-(y+z)$的时候$f[-(x+y)]=-(y+z)^3+y^3+z^3+3(y+z)yz=0$
+            所以原式含因式$x+y+z$，考虑到三次多项式，可以设
+            \[
+                x^3+y^3+z^3-3xyz=(x+y+z)[a(x^2+y^2+z^2)+b(xy+yz+zx)]
+            \]
+            比较两边$x^3$项的系数，得到$a=1$，但是对于$b$则不太好处理。这时我们可以用特定值$x=y=z=1$ 代入，
+            得到
+            \[
+                0=3\times (3+3b)
+            \]
+            所以$b=-1$，即$x^3+y^3+z^3-3xyz=(x+y+z)[(x^2+y^2+z^2)-(xy+yz+zx)]$
+
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 分解因式$(a+b+c)^3-(b+c-a)^3-(c+a-b)^3-(a+b-c)^3$
+        \begin{solution}{0.5cm}
+            \methodonly $a=0$时多项式为$0$，所以$a$是一个因式，同理$b,c$也是因式，即$abc$是它的因式。可以设
+            \[
+                (a+b+c)^3-(b+c-a)^3-(c+a-b)^3-(a+b-c)^3=kabc
+            \]
+            令$a=b=c=1$得到$k=24$，所以
+            \[
+                (a+b+c)^3-(b+c-a)^3-(c+a-b)^3-(a+b-c)^3=24abc
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+        \group{小结}{}
+        轮换式总能由一些基础轮换式组成，比如
+        \begin{itemize}
+            \item 一次齐次轮换式：$l(x+y+z)$
+            \item 二次齐次轮换式：$l(x^2+y^2+z^2)+m(xy+yz+zx)$
+            \item 三次齐次轮换式：$l(x^3+y^3+z^3)+m(x^2y+y^2z+z^2x)+n(xy^2+yz^2+zx^2)+kxyz$
+        \end{itemize}
+        其中$l,m,n,k$是待定系数。
+
+        \group{对称式和轮换式例题2}{}
+
+        \question[5] 分解因式$(x-y)^5+(y-z)^5+(z-x)^5$
+        \begin{solution}{0.5cm}
+            \methodonly 容易得到$(x-y)(y-z)(z-x)$是它的因式，所以可以设:
+            \[
+                (x-y)^5+(y-z)^5+(z-x)^5=(x-y)(y-z)(z-x)[l(x^2+y^2+z^2)+m(xy+yz+zx)]
+            \]
+            令$x=2,y=1,z=0$可以得到
+            \begin{equation}
+                \label{eq:sample_2_1}
+                1-32+1=-2(5l+2m)
+            \end{equation}
+            令$x=1,y=0,z=-1$可以得到
+            \begin{equation}
+                \label{eq:sample_2_2}
+                1-32+1=-2(2l-m)
+            \end{equation}
+            由\ref{eq:sample_2_1}式和\ref{eq:sample_2_2}式
+            \begin{equation}
+                \begin{cases}
+                    5l+2m=15 \\
+                    2l-m=15
+                \end{cases}
+            \end{equation}
+            即：
+            \begin{equation}
+                \begin{cases}
+                    l=5 \\
+                    m=-5
+                \end{cases}
+            \end{equation}
+            所以， 略 
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 分解因式$a^5-b^5-(a-b)^5$
+        \begin{solution}{0.5cm}
+            注意，这个不是轮换式。可以首先采取换元法。
+            \methodonly 令$-b=c$原式可化为
+            \[
+                a^5+c^5-(a+c)^5
+            \]
         \end{solution}
         \vspace{3.5cm}
 
