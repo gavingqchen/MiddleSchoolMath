@@ -209,8 +209,71 @@
             \[
                 a^5+c^5-(a+c)^5
             \]
+            显然当$a=0$或者$a=-c$时原式都为$0$。故而原式有有因式$ac(a+c)$。
+            考虑到齐次五次式，故而可以设
+            \[
+                a^5+c^5-(a+c)^5=ac(a+c)[m(a^2+c^2)+nac]
+            \]
+            令$a=1,c=1$得到
+            \begin{equation}
+                \label{eq: eq_7_1}
+                2-32=2\cdot (2m+n)
+            \end{equation}
+            令$a=2,c=1$得到
+            \begin{equation}
+                \label{eq: eq_7_2}
+                32+1-243=2\cdot 3(5m+2n)
+            \end{equation}  
+            由 \ref{eq: eq_7_1}式和\ref{eq: eq_7_2}         
+            \begin{equation}
+                \begin{cases}
+                    2m+n=-15 \\
+                    5m+2n=-35
+                \end{cases}
+            \end{equation}
+            \begin{equation}
+                \begin{cases}
+                    m=-5 \\
+                    n=-5
+                \end{cases}
+            \end{equation}
+            即$a^5+c^5-(a+c)^5=-5ac(a+c)[(a^2+c^2)+ac]$ \\
+            将$c=-b$代回原式
+            \[
+                a^5-b^5-(a-b)^5=5ab(a-b)[(a^2+b^2)-ab]
+            \]
         \end{solution}
         \vspace{3.5cm}
+
+        \question[5] 分解因式$a^2b+ab^2+a^2c+ac^2+b^2c+bc^2+3abc$
+        \begin{solution}{0.5cm}
+            \method 原式时三次齐次多项式，当$a=-(b+c)$时，原式可化为
+            \[
+                \begin{aligned}
+                    & \phantom{=} (b+c)^2b+[-(b+c)]b^2+(b+c)^2+[-(b+c)]c^2+b^2c+bc^2+3bc[-(b+c)] \\
+                    &= (b+c)(b^2+bc-b^2+bc+c^2-c^2+bc-3bc) \\
+                    &=0
+                \end{aligned}
+            \]
+            故而有因式$a+b+c$，故而可设
+            \[
+                (a+b+c)[m(a^2+b^2+c^2)+n(ab+bc+ca)]  
+            \]
+            取$a=0,b=1,c=2$得$2=5m+2n$ \\ 
+            取$a=0,b=2,c=2$得$1=2m+n$ \\
+            最后得到$m=0,n=1$
+
+            \method 此题完全可以用常规方法，反而更加简单
+            \[
+                \begin{aligned}
+                    & \phantom{=} a^2b+ab^2+a^2c+ac^2+b^2c+bc^2+3abc \\
+                    &= (a^2b+ab^2 +abc) +(a^2c+ac^2+abc)+(b^2c+bc^2+abc) \\
+                    &= [ab(a+b+c)[ac(a+c+b)][bc(b+c+a)] \\
+                    &= (ab+ac+bc)(a+b+c)
+                \end{aligned}
+            \]
+
+        \end{solution}
 
     \end{questions}
 \end{groups}
