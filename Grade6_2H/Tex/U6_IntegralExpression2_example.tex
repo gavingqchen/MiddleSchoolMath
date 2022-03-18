@@ -1,0 +1,162 @@
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
+
+\usepackage{multicol} % 分栏
+\usepackage{polynom} % 多项式除法
+\pagestyle{fancy}
+\fancyfoot[C]{\kaishu \small 第 \thepage 页 共 \pageref{lastpage} 页}
+%\fancyhead[L]{\includegraphics[width=2cm]{qrcode.png}}
+\title{整式综合2}
+%\subtitle{数学文科试卷}
+%\notice{满分150分, 120分钟完成, \\	允许使用计算器，答案一律写在答题纸上.}
+%\author{Gavin Chen}
+%\date{\today}
+\usepackage{enumerate} % 编号
+\usepackage{cases}
+
+\begin{document}
+
+\maketitle
+
+\begin{groups}
+
+    \group{对整式综合2}{}
+    \begin{questions}[]
+
+        \question[5]  在三角形$ABC$中，$a^2-16b^2-c^2+6ab+10bc=0$，其中$a,b,c$是三角形的三个边，求证：$a+c=2b$
+        \begin{solution}{0.5cm}
+            \methodonly 证明：将原等式的左边部分用双十字相乘进行因式分解（注意$ac$项系数为$0$） \\
+            \[
+                \begin{aligned}
+                     & \phantom{=} a^2-16b^2-c^2+6ab+10bc \\
+                     & = (a+8b-c)(a-2b+c)
+                \end{aligned}
+            \]
+            当然也可以采用主元法因式分解
+            \[
+                \begin{aligned}
+                     & \phantom{=} a^2-16b^2-c^2+6ab+10bc \\
+                     & = a^2+6ab-(8b-c)(2b-c)             \\
+                     & =[a+(8b-c)[a-(ab-c)]               \\
+                     & = (a+8b-c)(a-2b+c)
+                \end{aligned}
+            \]
+            所以可以得到$a+8b-c=0$或者 $a-2b+c=0$。\\
+            考虑到$a,b,c$是三角形三边，而三角形两边之和大于第三边，故而$a+8b-c\neq 0$，所以可以得到$a+c=2b$.
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5]  已知$a^2b+ac^2+b^2c=b^2a+bc^2+a^2c$
+        \begin{solution}{0.5cm}
+            \method
+            \[
+                \begin{aligned}
+                     & a^2b+ac^2+b^2c=b^2a+bc^2+a^2c,         \\
+                     & (a^2b-a^2c)+(b^2c-c^2b)+(c^2a-b^2a)=0, \\
+                     & a^2(b-c)+bc(b-c)-a(b+c)(b-c)=0,        \\
+                     & (b-c)[(a^2-ab)+(bc-ac)]=0,             \\
+                     & (b-c)(a-b)(a-c) =0
+                \end{aligned}
+            \]
+            \method 将原方程可化为
+            \[
+                a^2b+ac^2+b^2c-(b^2a+bc^2+a^2c)=0
+            \]
+            其等式左边是一个轮换式，且有因式$a-b$，故而也有因式$b-c$和$c-a$,即
+            \[
+                a^2b+ac^2+b^2c-(b^2a+bc^2+a^2c)=(a-b)(b-c)(c-a)=0
+            \]
+        \end{solution}
+        \vspace{3.5cm}
+
+
+        \question[5]  解方程$(16x+27)^2(8x+15)(2x+3)=7$
+        \begin{solution}{0.5cm}
+            \methodonly 方程两边都乘以$16$
+            \[
+                \begin{aligned}
+                    (16x+27)^2(8x+15)(2x+3)                 & =7         \\
+                    (16x+27)^2[2\cdot(8x+15)][8\cdot(2x+3)] & =16\cdot 7 \\
+                    (16x+27)^2(16x+30)(16x+24)              & =112
+                \end{aligned}
+            \]
+            换元法设$16x+27=t$得到
+            \[
+                \begin{aligned}
+                    t^2(t+3)(t-3)   & =112 \\
+                    t^4-9t^2-112    & =0   \\
+                    (t^2-16)(t^2+7) & =0
+                \end{aligned}
+            \]
+            由于$t^2\ge 0$， 故而$t^2=16$，即$t=\pm 4$ \\
+            还原成$x$，得到$x=-\frac{23}{16}$或者$x=-\frac{31}{16}$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 已知$a,b,c,d$满足 $a+b=c+d$，$a^3+b^3=c^3+d^3$，求证：$a^{2021}+b^{2021}=c^{2021}+d^{2021}$
+        \begin{solution}{0.5cm}
+            \methodonly 显然不是直接求值的。
+            由$a+b=c+d$ 可以得到$(a+b)^3=(c+d)^3$故而
+            \begin{equation}
+                \label{eq:5_1}
+                a^3+3a^2b+3ab^2+b^3=c^3+3c^2d+3cd^2+d^3
+            \end{equation}
+            减去$a^3+b^3=c^3+d^3$得到
+            \begin{equation}
+                \label{eq:5_2}
+                ab(a+b)=cd(c+d)
+            \end{equation}
+            分类讨论： \\
+            若$a+b=c+d=0$，则$a=-b,c=-d$，显然
+            \[
+                a^{2021}+b^{2021}=c^{2021}+d^{2021}=0
+            \]
+            若$a+b=c+d\neq 0$由\ref{eq:5_2}式可得
+            \begin{equation}
+                \label{eq:5_3}
+                ab=cd
+            \end{equation}
+            从而
+            \[
+                (a-b)^2=(a+b)^2-4ab=(c+d)^2-4cd=(c-d)^2
+            \]
+            故而
+            \begin{equation}
+                \label{eq:5_4}
+                a-b=c-d
+            \end{equation}
+            或者
+            \begin{equation}
+                \label{eq:5_5}
+                a-b=d-c
+            \end{equation}
+            若\ref{eq:5_4}成立，在和$a+b=c+d$相加得到$a=c,b=d$； \\
+            若\ref{eq:5_5}成立，在和$a+b=c+d$相加得到$a=d,b=c$。两者都容易得到
+            \[
+                a^{2021}+b^{2021}=c^{2021}+d^{2021}
+            \]
+            证毕
+        \end{solution}
+        \vspace{3.5cm}
+
+
+
+
+
+
+
+        \question[5]  $a$
+        \begin{solution}{0.5cm}
+            \methodonly 略。
+        \end{solution}
+        \vspace{3.5cm}
+
+
+
+    \end{questions}
+\end{groups}
+
+
+
+\label{lastpage}
+\end{document}
