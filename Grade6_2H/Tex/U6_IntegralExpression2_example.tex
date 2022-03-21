@@ -139,9 +139,83 @@
         \end{solution}
         \vspace{3.5cm}
 
+        \question[5]  证明：$(b+c-2a)^3+(c+a-2b)^3+(a+b-2c)^3=3(b+c-2a)(c+a-2b)(a+b-2c)$
+        \begin{solution}{0.5cm}
+            \methodonly 此题从左往右或者从右往左证明都不容易。但是考虑到欧拉公式的形式，可以通过左边-右边$=0$来证明
+            \[
+                \begin{aligned}
+                    &\phantom{=}(b+c-2a)^3+(c+a-2b)^3+(a+b-2c)^3-3(b+c-2a)(c+a-2b)(a+b-2c) \\ 
+                    &=[(b+c-2a)+(c+a-2b)+(a+b-2c)][\cdots] \\ 
+                    &=0
+                \end{aligned}
+            \]
+            所以左边$=$右边，证毕。
 
+        \end{solution}
+        \vspace{3.5cm}
 
+        \question[5]  已知$x+y+z=3$，且$(x-1)^3+(y-1)^3+(z-1)^3=0$，求证$x,y,z$中至少有一个为$1$.
+        \begin{solution}{0.5cm}
+            \methodonly 看到三个三次方的和联想到欧拉公式。
+            \begin{equation}
+                x+y+z=3
+            \end{equation}
+            得到
+            \begin{equation}
+                (x-1)+(y-1)+(z-1)=0
+            \end{equation}
+            设$x-1=p,y-1=q,z-1=r$，那么
+            \begin{equation}
+                \label{eq:6_1}
+                p^3+q^3+r^3-3pqr=(p+q+r)(p^2+q^2+r^2-pq-qr-rp)
+            \end{equation}
+            等式左边为$-3pqr$，右边为$0$。 \\ 
+            故而$p,q,r$中至少一个为$0$，即$x,y,z$中至少有一个为$1$。
 
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5]  已知$a,b,c$两辆不相等，并且$a^2+b^2+mab=b^2+c^2+mbc=c^2+a^2+mca$。
+        \begin{subquestions}
+            \subquestion  求$m$的值;
+            \begin{solution}{0.5cm}
+                \methodonly 因为
+                \begin{equation}
+                    \label{eq:7_1}
+                    a^2+b^2+mab=b^2+c^2+mbc
+                \end{equation}
+                由\ref{eq:7_1}得以得到
+                \begin{equation}
+                    \label{eq:7_2}
+                    \begin{aligned}
+                        a^2-c^2+mab-mbc&=0 \\ 
+                        (a+c)(a-c)+mb(a-c)&=0 \\ 
+                        (a-c)(a+c+mb)&=0
+                    \end{aligned}
+                \end{equation}
+                因为$a\neq c$所以可以得到
+                \begin{equation}
+                    \label{eq:7_3}
+                    a+c+mb=0   
+                \end{equation}
+                同理，$b+a+mc=0, c+b+ma=0$。任意两式相减即可得到$m=1$。
+            \end{solution}
+            \subquestion 证明：$a^2+b^2+c^2=2(a^2+b^2+mab)$.
+            \begin{solution}{0.5cm}
+                \methodonly 等式左边有$c$而右边没有，所以考虑把$c$替换掉。\\ 
+                由\ref{eq:7_3}式和$m=1$得以得到$a+b=-c$。所以
+                \begin{equation}
+                    \label{eq:7_4}
+                    \begin{aligned}
+                    &\phantom{=}a^2+b^2+c^2  \\ 
+                    &=a^2+b^2+(a+b)^2 \\ 
+                    &=2(a^2+b^2+ab)
+                    \end{aligned}
+                \end{equation}
+                由于$m=1$，故左边$=$右边，证毕。
+            \end{solution}
+        \end{subquestions}
+        \vspace{3.5cm}
 
 
 
