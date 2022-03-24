@@ -46,7 +46,7 @@
         \end{solution}
         \vspace{3.5cm}
 
-        \question[5]  已知$a^2b+ac^2+b^2c=b^2a+bc^2+a^2c$
+        \question[5]  已知$a^2b+ac^2+b^2c=b^2a+bc^2+a^2c$，求$(a-b)(b-c)(c-a)$的值。
         \begin{solution}{0.5cm}
             \method
             \[
@@ -156,7 +156,7 @@
 
         \question[5]  已知$x+y+z=3$，且$(x-1)^3+(y-1)^3+(z-1)^3=0$，求证$x,y,z$中至少有一个为$1$.
         \begin{solution}{0.5cm}
-            \methodonly 看到三个三次方的和联想到欧拉公式。
+            \method 看到三个三次方的和联想到欧拉公式。
             \begin{equation}
                 x+y+z=3
             \end{equation}
@@ -171,11 +171,46 @@
             \end{equation}
             等式左边为$-3pqr$，右边为$0$。 \\ 
             故而$p,q,r$中至少一个为$0$，即$x,y,z$中至少有一个为$1$。
-
+            \method 由$(x-1)+(y-1)+(z-1)=0$可得
+            \[
+                x-1=-(y-1)-(z-1)    
+            \]
+            代入可得
+            \[
+                \begin{aligned}
+                    &\phantom{=}(x-1)^3+(y-1)^3+(z-1)^3 \\ 
+                    &=-[(y-1)+(z-1)]^3+(y-1)^3+(z-1)^3 \\ 
+                    & = -3(y-1)^2(z-1)-3(y-1)(z-1)^2 \\ 
+                    &-3(y-1)(z-1)[(y+1)+(z+1)] \\ 
+                    &=3(y-1)(z-1)(x-1) =0
+                \end{aligned}
+            \]
+            故至少由一个项为$0$，即$x,y,z$中至少有一个为$1$。
         \end{solution}
         \vspace{3.5cm}
 
-        \question[5]  已知$a,b,c$两辆不相等，并且$a^2+b^2+mab=b^2+c^2+mbc=c^2+a^2+mca$。
+        \question[5]  设$x^3+mx^2+nx+r$是关于$x$的一次式的完全立方，求证：$3mr=n^2$。
+        \begin{solution}{0.5cm}
+            \methodonly 最高次想系数为$0$，考虑采用待定系数法，设一次项为$x+k$，所以可以得到
+            \[
+                \begin{aligned}
+                    x^3+mx^2+nx+r &= (x+k)^3 \\ 
+                    x^3+mx^2+nx+r &=x^3+3x^2k+3xk^2+k^3 
+                \end{aligned}    
+            \]
+            \begin{equation}
+                \label{eq:8_1}
+                \begin{cases}
+                    m=3k \\
+                    n=3k^2 \\ 
+                    r=k^3
+                \end{cases}
+            \end{equation}
+            由上述方程组可得$3mr=9k^4=(3k^2)^2=n^2$，证毕。
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5]  已知$a,b,c$两两不相等，并且$a^2+b^2+mab=b^2+c^2+mbc=c^2+a^2+mca$。
         \begin{subquestions}
             \subquestion  求$m$的值;
             \begin{solution}{0.5cm}
@@ -218,13 +253,63 @@
         \vspace{3.5cm}
 
 
-
-        \question[5]  $a$
+        \question[5]  已知$m^2+n^2=1, p^2+q^2=1, mp+nq=0$，求证：$m^2+p^2=1,n^2+q^2=1,mn+pq=0$。
         \begin{solution}{0.5cm}
-            \methodonly 略。
+            \methodonly 分析：由$mp+nq=0$可以得到$nq=-mp$，变形$\frac{q}{m}=-\frac{p}{n}$，连比的可以用设$k$法，这样替换后都变成$m,n,k$的方程。
+            同时由于化成分式形式，故而需要考虑分母为$0$的情况。\\ 
+            解：若$m,n$中有一个为$0$, 由于对称性，不妨设$m=0$，那么容易得到$n^2=1, q=0, p^2=1$，代入可证。\\ 
+            现在考虑$m,n$均不为$0$的情况。设$q=mk, p=-nk$，那么容易得到
+            \[
+                \begin{aligned}
+                    p^2+q^2&=1 \\
+                    k^2(m^2+n^2)&=1 \\
+                    k^2&=1
+                \end{aligned}
+            \]
+            所以
+            \[
+                \begin{aligned}
+                    &\phantom{=}m^2+p^2 \\
+                    &=m^2+k^2n^2 \\
+                    &=m^2+n^2=1 
+                \end{aligned}
+            \]
+            \[
+                \begin{aligned}
+                    &\phantom{=}n^2+q^2 \\
+                    &=k^2m^2+n^2 \\
+                    &=m^2+n^2=1 
+                \end{aligned}
+            \]
+            \[
+                \begin{aligned}
+                    &\phantom{=}mn+pq \\
+                    &=mn-k^2(mn) \\
+                    &=mn-mn=0 
+                \end{aligned}
+            \]
+            证毕。
+
         \end{solution}
         \vspace{3.5cm}
 
+        \question[5]  设$x+y+z=xyz$，求证：$x(1-y^2)(1-z^2)+y(1-z^2)(1-x^2)+z(1-x^2)(1-y^2)=4xyz$
+        \begin{solution}{0.5cm}
+            \methodonly 此题左边为五次，右边三次，没有简便方法。只能代入计算。
+            由$x+y+z=xyz$，可得$x+y=xyz-z$，同理$y+z=xyz-x, z+x=xyz-y$。将左边展开后慢慢替换向$xyz$形式靠拢
+            \[
+                \begin{aligned}
+                    &\phantom{=}x(1-y^2)(1-z^2)+y(1-z^2)(1-x^2)+z(1-x^2)(1-y^2) \\
+                    &=x(1-y^2-z^2+y^2z^2)+y(1-z^2-x^2+z^2x^2) +z(1-x^2-y^2+x^2y^2) \\
+                    &=(x+y+z)-xy^2-xz^2+xy^2z^2-yz^2-yx^2+yz^2x^2-zx^2-zy^2+zx^2y^2 \\ 
+                    &=xyz-xy(x+y)-yz(y+z)-zx(z+x)+xyz(yz+zx+xy) \\ 
+                    &=xyz-xy(xyz-z)-yz(xyz-x)-zx(xyz-y)+xyz(yz+zx+xy) \\ 
+                    &=xyz+xyz+yzx+zxy \\ 
+                    &=4xyz
+                \end{aligned}
+            \]
+            证毕.
+        \end{solution}
 
 
     \end{questions}
