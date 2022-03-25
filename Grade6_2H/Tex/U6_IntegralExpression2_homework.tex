@@ -1,5 +1,5 @@
-\documentclass[windows,csize4]{BHCexam}
-%\documentclass[windows,csize4,answers]{BHCexam}
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
 
 \usepackage{multicol} % 分栏
 \pagestyle{fancy}
@@ -34,11 +34,81 @@
         \end{solution}
         \vspace{3.5cm}
 
+        \question[5] 若$a,b,c$是整数，且$b$是正整数，同时他们满足$a+b=c,b+c=d,c+d=a$，那么$a+b+c+d$的最大值
+        \begin{solution}{0.5cm}
+            \methodonly 由$a+b=c, c+d=a$可得$b=-d$，代入$b+c=d$得到$c=2d, a=3d$。
+            \[
+                \begin{aligned}
+                    &\phantom{=} a+b+c+d \\ 
+                    &=3d+(-d)+2d+d \\ 
+                    &=5d \\ 
+                    &=-5b
+                \end{aligned}
+            \]
+            因为$b$为正整数，所以最大值为$-5$。
+        \end{solution}
+        \vspace{3.5cm}
 
+        \question[5] 若$a^2+2a+5$是$a^4+ma^2+n$的一个因式，求$mn$的值。
+        \begin{solution}{0.5cm}
+            \methodonly 由待定系数法，设$a^4+ma^2+n=(a^2+2a+5)(a^2+ua+\frac{n}{5})$
+            \[
+                \begin{cases}
+                    u+2=0 \\
+                    5+\frac{n}{5}+2u=m \\ 
+                    \frac{2n}{5} +5u=0
+                \end{cases}
+            \]
+            \[
+                \begin{cases}
+                    u=-2 \\
+                    m=6 \\ 
+                    n=25
+                \end{cases}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
 
+        \question[5] 若$a+b=10, a^3+b^3=100$，求$a^2+b^2$
+        \begin{solution}{0.5cm}
+            \methodonly $40$
+        \end{solution}
+        \vspace{3.5cm}
 
+        \question[5] 若$a^3+b^3+c^3=a^2+b^2+c^2=a+b+c=1$，求$abc$的值。
+        \begin{solution}{0.5cm}
+            \methodonly
+            \[
+                \begin{aligned}
+                    a+b+c&=1 \\ 
+                    a^2+b^2+c^2+2ab+2bc+2ca&=1 \\ 
+                    1+2(ab+bc+ca)&=1 \\ 
+                    ab+bc+ca&=0
+                \end{aligned}
+            \]
+            \[
+                \begin{aligned}
+                    a^3+b^3+c^3-3abc&=(a+b+c)(a^2+b^2+c^2-ab-bc-ca) \\ 
+                    1-3abc&=1\cdot(1-0) \\ 
+                    3abc&=0 \\
+                    abc&=0
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
 
-
+        \question[5] 若$x-y=1+m, y-z=1-m$，求$x^2+y^2+z^2-xy-yz-zx$
+        \begin{solution}{0.5cm}
+            \methodonly $x-y=1+m, y-z=1-m$得到$x-z=2$
+            \[
+                \begin{aligned}
+                    &\phantom{=}x^2+y^2+z^2-xy-yz-zx \\ 
+                    &=\frac{1}{2}[(x-y)^2+(y-z)^2+(z-x)^2] \\ 
+                    &=m^2+3
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{3.5cm}
 
 
         \question[5] $aa$
