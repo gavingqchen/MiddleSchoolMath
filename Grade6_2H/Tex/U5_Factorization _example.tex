@@ -43,7 +43,7 @@
     例如，$x^2y+y^2z+z^2x$ 中将$x$以$y$代换，$y$以$z$代换，$z$以$x$代换，可以得到
     $y^2z+z^2x+x^2y$，它和原式完全相同，所以它是关于$x,y,z$的轮换式。又比如$x^2+y^2+z^2$等等。 \\
 
-    关于其次多项式的概念： \\
+    关于齐次多项式的概念： \\
     \fbox
     {
         \parbox{\textwidth}
@@ -64,13 +64,13 @@
               所以关于$x,y,z$的二次齐次对称式的一般形式是$a(x^2+y^2+z^2)+b(xy+yz+zx)$，其中$a,b$为系数。
     \end{itemize}
 
-    一般性的，关于$x,y$的齐次对称式（$a,b$为系数）是：
+    一般性的，关于$x,y$的齐次轮换对称式（$a,b$为系数）是：
     \begin{itemize}
         \item 一次$a(x+y)$
         \item 二次$a(x^2+y^2)+bxy$
         \item 三次$a(x^3+y^3)+b(x^2y+y^2x)$
     \end{itemize}
-    关于$x,y,z$的齐次对称式（$a,b,c,d$为系数）是：
+    关于$x,y,z$的齐次轮换对称式（$a,b,c,d$为系数）是(想一想哪几个是轮换式但不是对称式)：
     \begin{itemize}
         \item 一次$a(x+y+z)$
         \item 二次$a(x^2+y^2+z^2)+b(xy+yz+zx)$
@@ -92,7 +92,7 @@
     \group{对称式和轮换式例题1}{}
     \begin{questions}[]
         \question[5] 下面那些是轮换式，那些是对称式：\\
-        $x+y+z$，$xyz$，$x^3+y^3+z^3-3xyz$，$x^2y+y^2x$，$x^2y+y^2z+z^2x$，$\frac{x^2}{x-1}+\frac{y^2}{y-z}$
+        $x+y+z$，$xyz$，$x^3+y^3+z^3-3xyz$，$x^2y+y^2x$，$x^2y+y^2z+z^2x$，$\frac{x^2}{x-1}+\frac{y^2}{y-1}$
         \begin{solution}{0.5cm}
             \methodonly 略。
         \end{solution}
@@ -247,7 +247,7 @@
 
         \question[5] 分解因式$a^2b+ab^2+a^2c+ac^2+b^2c+bc^2+3abc$
         \begin{solution}{0.5cm}
-            \method 原式时三次齐次多项式，当$a=-(b+c)$时，原式可化为
+            \method 原式是三次齐次多项式，当$a=-(b+c)$时，原式可化为
             \[
                 \begin{aligned}
                     & \phantom{=} (b+c)^2b+[-(b+c)]b^2+(b+c)^2+[-(b+c)]c^2+b^2c+bc^2+3bc[-(b+c)] \\
