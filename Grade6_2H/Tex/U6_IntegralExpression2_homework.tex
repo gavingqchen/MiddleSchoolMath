@@ -111,11 +111,60 @@
         \vspace{3.5cm}
 
 
-        \question[5] $aa$
+        \question[5] 已知直角三角形的直角边为$a,b$，斜边为$c$。其中$a,b,c$均为整数并且$a$为质数。求证：
+        $2(a+b+1)$是完全平方数。
         \begin{solution}{0.5cm}
-            \methodonly $a$
+            \methodonly 由直角三角形得$a^2=c^2-b^2=(c-b)(c+b)$，因为$a$是质数，故而
+            \[
+                \begin{cases}
+                    c-b=1 \\
+                    c+b=a^2
+                \end{cases}
+            \]
+            得到$2b=a^2-1$，所以
+            \[
+                \begin{aligned}
+                    &\phantom{=}2(a+b+1) \\
+                    &=a^2+2a+1 \\ 
+                    &=(a+1)^2
+                \end{aligned}
+            \]
+            证毕。
         \end{solution}
         \vspace{3.5cm}
+
+        \question[5] 已知$(1-ab)^2=(2ab-a-b)(a+b-2)$，求证$a,b$中至少有一个为$1$。
+        \begin{solution}{0.5cm}
+            \methodonly 令$a+b=x, ab=y$，原方程变为$(1-y)^2-(2y-x)(x-2)=0$。原方程左边
+            \[
+                \begin{aligned}
+                    &\phantom{=}(1-y)^2-(2y-x)(x-2) \\
+                    &=y^2-2y+1+x^2-2xy-2x+4y \\ 
+                    &=y^2+2y+1+x^2-2x(y+1) \\ 
+                    &=(y+1^2)-2x(y+1)+x^2 \\ 
+                    &(y+1-x)^2
+                \end{aligned}
+            \]
+            为$0$，即$y+1=x$，亦即$ab+1=a+b$，得到$(a-1)(b-1)=0$，故两者至少有一个为$1$。
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5] 若$x$是正整数，则$x^4-3x^2+9$是质数还是合数，并证明你的结论。
+        \begin{solution}{0.5cm}
+            \methodonly 
+            \[
+                \begin{aligned}
+                    &\phantom{=}x^4-3x^2+9 \\
+                    &=x^4+6x^2+9-9x^2 \\ 
+                    &=(x^2+3)^2=9x^2 \\ 
+                    &=(x^2+3x+3)(x^2-3x+3) 
+                \end{aligned}
+            \]
+            当$x=1$，原式为$7$，质数。 \\ 
+            当$x=2$，原式为$13$，质数。 \\ 
+            当$x\ge 3$上述两个因式都大于$1$，所以$x\ge 3$时都是合数
+
+        \end{solution}
 
     \end{questions}
 
