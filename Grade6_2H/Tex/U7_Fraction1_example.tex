@@ -1,0 +1,193 @@
+%\documentclass[windows,csize4]{BHCexam}
+\documentclass[windows,csize4,answers]{BHCexam}
+
+\usepackage{multicol} % 分栏
+\usepackage{polynom} % 多项式除法
+\pagestyle{fancy}
+\fancyfoot[C]{\kaishu \small 第 \thepage 页 共 \pageref{lastpage} 页}
+%\fancyhead[L]{\includegraphics[width=2cm]{qrcode.png}}
+\title{分式的概念和化简求值}
+%\subtitle{数学文科试卷}
+%\notice{满分150分, 120分钟完成, \\	允许使用计算器，答案一律写在答题纸上.}
+%\author{Gavin Chen}
+%\date{\today}
+\usepackage{enumerate} % 编号
+\usepackage{cases}
+
+\begin{document}
+
+\maketitle
+
+\begin{groups}
+
+    \group{分式的概念}
+
+    关于分式的基本概念：\\
+    \fbox
+    {
+        \parbox{\textwidth}
+        {
+            当两个整式相除，即 $A\div B$时，可以表示为$\frac{A}{B}$.如果$B$含有字母，那么$\frac{A}{B}$叫做分式。其中$A$为
+            分式的分子，$B$为分式的分母。\uwave{如果分式的分母为零，那么这个分式无意义。}
+        }
+    }
+    \group{分式的加减乘除和基本性质}
+
+    分式加减乘除规则
+    \begin{itemize}
+        \item 分式加法 \\
+              \[
+                  \frac{a}{b}+\frac{c}{d}=\frac{ad}{bd}+\frac{cb}{bd}=\frac{ad+cb}{bd}
+              \]
+
+        \item 分式减法 \\
+              \[
+                  \frac{a}{b}-\frac{c}{d}=\frac{ad}{bd}-\frac{cb}{bd}=\frac{ad-cb}{bd}
+              \]
+        \item 分式乘法 \\
+              \[
+                  \frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd}
+              \]
+        \item 分式乘法 \\
+              \[
+                  \frac{a}{b}\div\frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c}=\frac{ad}{bc}
+              \]
+        \item 分式乘方 \\
+              \[
+                  \left(\frac{a}{b}\right)^n=\frac{a^n}{b^n}
+              \]
+    \end{itemize}
+
+    分式基本性质
+    \begin{itemize}
+        \item
+              \[
+                  \frac{a}{b}=\frac{am}{bm}, \quad
+                  \frac{a}{b}=\frac{a\div m}{b\div m} (m\neq 0)
+              \]
+        \item 分子、分母和分式本身的符号三者中，改变任何两个的符号，分式的值不变。
+    \end{itemize}
+
+    比例的性质
+    \begin{itemize}
+        \item 如果$\frac{a}{b}=\frac{c}{d}, \frac{c}{d}=\frac{e}{f}$，那么$\frac{a}{b}=\frac{e}{f}$。
+        \item 如果$\frac{a}{b}=\frac{c}{d}$，那么$ad=bc$。
+        \item 如果$\frac{a}{b}=\frac{c}{d}$，那么$\frac{a+b}{b}=\frac{c+d}{d}$（合比性质）。
+        \item 如果$\frac{a}{b}=\frac{c}{d},(a-b\neq 0)$，那么$\frac{a+b}{a-b}=\frac{c+d}{c-d}$（合分比性质）。
+        \item 如果$\frac{a}{b}=\frac{c}{d}=\cdots =\frac{m}{n}$，且$b+d+\cdots +n\neq 0$，
+              那么$\frac{a+c+\cdots +m}{b+d+\cdots +n}=\frac{a}{b}$（等比性质）。
+    \end{itemize}
+
+
+    \group{例题}
+
+    \begin{questions}[]
+
+        \question[5] 若$a,b,c$为非零常数，且$\frac{a+b-c}{c}=\frac{a-b+c}{b}=\frac{-a+b+c}{a}$，
+        求$\frac{(a+b)(b+c)(c+a)}{abc}$
+        \begin{solution}{0.5cm}
+            \methodonly 由
+            \[
+                \frac{a+b-c}{c}=\frac{a-b+c}{b}=\frac{-a+b+c}{a}
+            \]
+            得到
+            \[
+                \frac{a+b}{c}-1=\frac{a+c}{b}-1=\frac{b+c}{a}-1
+            \]
+            所以设
+            \[
+                \frac{a+b}{c}=\frac{a+c}{b}=\frac{b+c}{a}=k
+            \]
+            将三式相加$2(a+b+c)=k(a+b+c)$ \\
+            当$a+b+c\neq 0$时，$k=2$\\
+            当$a+b+c=0$时，$k=-1$\\
+            \[
+                \begin{aligned}
+                     & \phantom{=} \frac{(a+b)(b+c)(c+a)}{abc} \\
+                     & = \frac{k^3 abc}{abc}                   \\
+                     & = k^3
+                \end{aligned}
+            \]
+            所以原式等于$-1$或$8$。
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5]  已知$\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1, \frac{a}{x}+\frac{b}{y}+\frac{c}{z}=0$，
+        求$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}$的值。
+        \begin{solution}{0.5cm}
+            \method 把$\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1$两边平方，得
+            \[
+                \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}+2\left( \frac{xy}{ab}+\frac{yz}{bc}+\frac{zx}{ca} \right)=1
+            \]
+            整理得到
+            \[
+                \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}+2\frac{xyz}{abc} \left( \frac{c}{z}+\frac{a}{x}+\frac{b}{y} \right)=1
+            \]
+            又因为$\frac{a}{x}+\frac{b}{y}+\frac{c}{z}=0$，所以
+            \[
+                \frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1
+            \]
+            \method 换元，设$\frac{x}{a}=u, \frac{y}{b}=v, \frac{z}{c}=w$，则原式可化为
+            \[
+                u+v+w=1,
+                \frac{1}{u}+\frac{1}{v}+\frac{1}{w}=0
+            \]
+            由后一个条件通分$\frac{uv+vw+wu}{uvw}=0$，而$u,v,w$均不为零，得到$uv+vw+wu=0$。\\
+            把$u+v+w=1$两边平方，得到$u^2+v^2+w^2+2(uv+vw+wu)=1$，于是$u^2+v^2+w^2=1$，
+            即$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5]  已知$\frac{x}{x^2+x+1}=\frac{1}{4}$，求$\frac{x^2}{x^4+x^2+1}$的值。
+        \begin{solution}{0.5cm}
+            \methodonly 由已知$\frac{x}{x^2+x+1}=\frac{1}{4}$可以得到
+            \[
+                \frac{x^2+x+1}{x}=4
+            \]
+            即
+            \[
+                x+\frac{1}{x}+1=4
+            \]
+            即$x+\frac{1}{x}=3$，$x^2+\frac{1}{x^2}=7$，所以
+            \[
+                \frac{x^4+x^2+1}{x^2}=x^2+\frac{1}{x^2}+1=7+1=8
+            \]
+            即$\frac{x^2}{x^4+x^2+1}=\frac{1}{8}$。
+        \end{solution}
+        \vspace{3.5cm}
+
+        \question[5]  已知三个不全为$0$的数$x,y,z$满足$4x-3y-6z=0, x+2y-7z=0$。求$\frac{2x^2+3y^2+6z^2}{x^2+5y^2+7z^2}$的值
+        \begin{solution}{0.5cm}
+            \methodonly 两个方程三个未知数无法直接求解，但可以把其中一个未知数作为参数。由已知:
+            \begin{numcases}{}
+                4x-3y-6z=0 \label{eq:4_1} \\
+                x+2y-7z=0  \label{eq:4_2}
+            \end{numcases}
+            (\ref{eq:4_2})$ \times 4 -$(\ref{eq:4_1})得到$y=2z$，\\
+            代入(\ref{eq:4_2})得到$x=3z$。
+            所以
+            \[
+                \frac{2x^2+3y^2+6z^2}{x^2+5y^2+7z^2}=\frac{2(3z)^2+3(2z)^2+6z^2}{(3z)^2+5(2z)^2+7z^2}=1
+            \]
+
+        \end{solution}
+        \vspace{3.5cm}
+
+
+
+
+
+
+        \question[5]  $a$
+        \begin{solution}{0.5cm}
+            \methodonly 略
+        \end{solution}
+        \vspace{3.5cm}
+
+    \end{questions}
+\end{groups}
+
+
+
+\label{lastpage}
+\end{document}
