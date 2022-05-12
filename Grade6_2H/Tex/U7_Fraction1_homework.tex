@@ -1,0 +1,108 @@
+\documentclass[windows,csize4]{BHCexam}
+%\documentclass[windows,csize4,answers]{BHCexam}
+
+\usepackage{multicol} % 分栏
+\pagestyle{fancy}
+\fancyfoot[C]{\kaishu \small 第 \thepage 页 共 \pageref{lastpage} 页}
+%\fancyhead[L]{\includegraphics[width=2cm]{qrcode.png}}
+\title{分式的概念和化简求值-作业}
+%\subtitle{数学文科试卷}
+%\notice{满分150分, 120分钟完成, \\	允许使用计算器，答案一律写在答题纸上.}
+%\author{Gavin Chen}
+%\date{\today}
+\usepackage{enumerate} % 编号
+
+\begin{document}
+\maketitle
+
+
+\begin{groups}
+    \group{分式的概念和化简求值}{}
+    \begin{questions}[]
+
+        \question[5] 已知$\frac{1}{n}-\frac{1}{m}-\frac{1}{m-n}=0$，求$\left(\frac{m}{n}+\frac{n}{m}\right)^2$的值。
+        \begin{solution}{0.5cm}
+            \methodonly 由已知$(m-n)^2=mn$，所以$m^2+n^2=3mn$，所以原式
+            \[
+                \begin{aligned}
+                    &\phantom{=}\left(\frac{m}{n}+\frac{n}{m}\right)^2 \\
+                    &= \left(\frac{m^2+n^2}{mn}\right)^2 \\ 
+                    &=9
+                \end{aligned}
+            \]
+        \end{solution}
+        \vspace{4.5cm}
+
+        \question[5] 已知$\frac{1}{x}=\frac{2}{y+z}=\frac{3}{z+x}$，求$\frac{3z+5y}{4x}$的值。
+        \begin{solution}{0.5cm}
+            \methodonly 此题倒过来设$k$。\\
+            设$\frac{x}{1}=\frac{y+z}{2}=\frac{z+x}{3}=k$，则
+            \[
+            \begin{cases}
+                x=k \\
+                y+z=2k \\
+                z+x=3k
+            \end{cases}
+            \]
+            即
+            \[
+            \begin{cases}
+                x=k \\
+                y=0k \\
+                z=2k
+            \end{cases}
+            \]
+            所以$\frac{3z+5y}{4x}=\frac{6k}{4k}=\frac{3}{2}$。
+        \end{solution}
+        \vspace{4.5cm}
+
+        \question[5] 已知$x^2-8x+13=0$，求$\frac{x^4-6x^3-2x^2+18x+23}{x^2-8x+15}$
+        \begin{solution}{0.5cm}
+            \methodonly 分子除以$x^2-8x+15$后余$10$，分母除以$x^2-8x+15$后余$2$，所以为$5$。
+        \end{solution}
+        \vspace{4.5cm}
+
+        \question[5] 已知$x+y+z=3$，且$x,y,z$不全相等，则$\frac{3(x-1)(y-1)(z-1)}{(x-1)^3+(y-1)^3+(z-1)^3}$
+        \begin{solution}{0.5cm}
+            \methodonly 换元$x-1=u, y-1=v, z-1=w$后欧拉公式，结果为$1$
+        \end{solution}
+        \vspace{4.5cm}
+
+        \question[5] 已知$x^2-3x+1=0$，求$\frac{2x^5-5x^4+2x^3-8x^2}{x^2+1}$的值。
+        \begin{solution}{0.5cm}
+            \methodonly 直接分子去凑比较麻烦，可以直接多项式除法。\\
+            将分子除以$x^2-3x+1$，\\
+            $2x^5-5x^4+2x^3-8x^2=(x^2-3x+1)(2x^3+x^2+3x)-3x$，即原式可化为 \\
+            $\frac{-3x}{x^2+1}=\frac{-(x^2+1)}{x^2+1}=-1$
+        \end{solution}
+        \vspace{4.5cm}
+
+        \question[5] 已知$a+b+c=0$，且$a,b,c$均不为$0$，求$\frac{1}{b^2+c^2-a^2}+\frac{1}{c^2+a^2-b^2}+\frac{1}{a^2+b^2-c^2}$的值。
+        \begin{solution}{0.5cm}
+            \methodonly 由$a+b=-c$得到$a^2+b^2-c^2=-2ab$，同理$b^2+c^2-a^2=-abc, c^2+a^2-b^2=-2ca$原式结果为$0$。
+        \end{solution}
+        \vspace{4.5cm}
+
+        \question[5] 已知$x,y,z$为三个不相等的非零实数，且$x+\frac{1}{y}=y+\frac{1}{z}=z+\frac{1}{x}$，求证：$x^2y^2z^2=1$。
+        \begin{solution}{0.5cm}
+            \methodonly 由$x+\frac{1}{y}=y+\frac{1}{z}$得到$x-y=\frac{y-z}{yz}$，由因为$x\neq y$所以$yz=\frac{y-z}{x-y}$。\\
+            同理$xy=\frac{x-y}{z-x},\quad zx=\frac{z-x}{y-z}$。\\
+            相乘后可得$x^2y^2z^2=1$。
+        \end{solution}
+        \vspace{4.5cm}
+
+        \question[5] 有理数$x,y,z$满足$(y-z)^2+(z-x)^2+(x-y)^2=(y+z-2x)^2+(z+x-2y)^2+(x+y-2z)^2$，且$y^2\neq 1$。
+        求$\frac{(yz+1)(x^2-1)}{(zx+1)(y^2-1)}$的值。
+        \begin{solution}{0.5cm}
+            \methodonly 设$x-y=a, \quad y-z=b, \quad z-x=c$，代入原式展开可得$a^2+b^2+c^2-2ab-2bc-2ca=0$。\\
+            又$a+b+c=0$，显然$a^2+b^2+c^2+2ab+2bc+2ca=0$.\\
+            两式相加$a^2+b^2+c^2=0$，即$a=b=c=0, \quad x=y=z$。于是所求值为$1$。
+        \end{solution}
+
+    \end{questions}
+
+\end{groups}
+
+
+\label{lastpage}
+\end{document}
