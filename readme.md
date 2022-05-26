@@ -31,8 +31,5 @@ XeLaTeX 编译
 [GitHub](https://github.com/gavingqchen/MiddleSchoolMath)
 
 ## 感谢
-BHCexam 项目提供的LaTeX试卷排版文档类。
-
-项目主页:[BHCexam](https://github.com/mathedu4all/bhcexam)
-
+[BHCexam](https://github.com/mathedu4all/bhcexam) 项目提供的LaTeX试卷排版文档类。
 
